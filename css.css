@@ -1,12 +1,18 @@
 .logo {
     /* background: #ef9a9a; */
     background-image: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);
-    height: 700px;
+    height: 670px;
 }
-
-.minibody {
+.cv {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.right {
     /* background: #ef9a9a; */
-    height: 700px;
+    height: 670px;
+    text-align: left;
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 body {
@@ -26,6 +32,7 @@ body {
 
 .container {
     margin: 0 auto;
+    margin-bottom: 10px;
 }
 .listicon a {
     margin: 3px;
@@ -37,4 +44,51 @@ body {
 
 .listicon svg:hover {
     transform: scale(1.2);
+}
+.left {
+    position: relative;
+    text-align: center;
+}
+.Left-footder {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    height: 100%
+    display flex;
+    flex-direction: row; /* OPTIONAL IF ONLY ONE ELEMENT */
+    justify-content: center;
+    align-items: center;
+}
+body{
+    text-align: center;
+    color: #555;
+}
+.left{
+    color: #000;
+}
+/* code right */
+.topic h3{
+    font-weight: bold;
+    margin-bottom:30px;
+   
+}
+.right span {
+    color: #FF719A;
+    margin-right: 10px;
+    font-weight: bold;
+}
+.context-topic p{
+    text-align: left;
+}
+.contact p{
+   margin-bottom: 10px;
+  
+}
+.feature {
+    margin-top:30px;
+}
+.feature div{
+    margin-bottom: 10px;
 }
