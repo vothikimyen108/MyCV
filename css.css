@@ -17,6 +17,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 body {
     font-family: 'Roboto', sans-serif;
+
 }
 .profile-circel-image-200 img {
     width: 200px;
@@ -30,9 +31,9 @@ body {
  
 }
 
-.container {
+.container-cover {
     margin: 0 auto;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 .listicon a {
     margin: 3px;
@@ -69,6 +70,7 @@ body{
     color: #000;
 }
 /* code right */
+
 .topic h3{
     font-weight: bold;
     margin-bottom:30px;
@@ -79,16 +81,134 @@ body{
     margin-right: 10px;
     font-weight: bold;
 }
+
 .context-topic p{
-    text-align: left;
+    text-align: justify;
 }
 .contact p{
    margin-bottom: 10px;
-  
+   margin-left: 10px;
 }
-.feature {
-    margin-top:30px;
-}
+
 .feature div{
     margin-bottom: 10px;
 }
+/* timeline */
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+ul.timeline:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.timeline > li {
+    padding-left: 20px;
+}
+ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #22c0e8;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+/* vong tron phan tram */
+
+  
+  section { text-align: center;
+}
+  
+ 
+ section p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 30em;
+    text-align: center;
+  }
+  
+  .arrow {
+    border: 2em solid transparent;
+    height: 0;
+    margin: 50vh auto;
+    width: 0;
+  }
+  
+  .arrow.down {
+    border-bottom: none;
+    border-top-color: #e5e5e5;
+  }
+  .arrow.up {
+      border-bottom-color: #e5e5e5;
+      border-top: none;
+  }
+  /*** RADIAL PROGRESS ***/
+  /* Circumference = 2πr */
+  /* π = 3.1415926535898 */
+  /* r = 35 */
+  
+  svg.radial-progress {
+    height: auto;
+    max-width: 90px;
+    padding: 1em;
+    transform: rotate(-90deg);
+    width: 100%;
+
+  }
+  
+  svg.radial-progress circle {
+    fill: rgba(0,0,0,0);
+    stroke: #fff;
+    stroke-dashoffset: 219.91148575129; /* Circumference */
+    stroke-width: 10;
+  }
+  
+  svg.radial-progress circle.incomplete { opacity: 0.25; }
+  
+  svg.radial-progress circle.complete { stroke-dasharray: 219.91148575129; /* Circumference */ }
+  
+  svg.radial-progress text {
+
+    font: 400 1em/1 'Oswald', sans-serif;
+    text-anchor: middle;
+  }
+  .skills {
+     display: flex;
+
+  }
+  .skills-left{
+     flex: 50%;
+  }
+  .skills-right {
+      flex: 50%;
+  }
+  /*** COLORS ***/
+  /* Primary */
+  
+  svg.radial-progress:nth-of-type(6n+1) circle { stroke: #a2ed56; }
+  
+  /* Secondary */
+  
+  svg.radial-progress:nth-of-type(6n+2) circle { stroke: #83e4e2; }
+  
+  /* Tertiary */
+  
+  svg.radial-progress:nth-of-type(6n+3) circle { stroke: #fd6470; }
+  
+  /* Quaternary */
+  
+  svg.radial-progress:nth-of-type(6n+4) circle { stroke: #fca858; }
+  
+  /* Quinary */
+  
+  svg.radial-progress:nth-of-type(6n+5) circle { stroke: #fddc32; }
