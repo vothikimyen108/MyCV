@@ -13,6 +13,7 @@
     /* background: #ef9a9a; */
     height: 670px;
     text-align: left;
+    overflow: auto;
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 body {
@@ -93,6 +94,19 @@ body{
 .feature div{
     margin-bottom: 10px;
 }
+
+
+
+/*page  resume */
+
+.right h4 {
+    font-weight: bold;
+}
+ul.timeline li span{
+    color:gray !important;
+
+}
+
 /* timeline */
 ul.timeline {
     list-style-type: none;
@@ -101,28 +115,33 @@ ul.timeline {
 ul.timeline:before {
     content: ' ';
     background: #d4d9df;
+    opacity: 0.5;
     display: inline-block;
     position: absolute;
-
+    left: 26px;
     width: 2px;
     height: 100%;
     z-index: 400;
 }
 ul.timeline > li {
     padding-left: 20px;
+    position: relative;
 }
 ul.timeline > li:before {
     content: ' ';
+    top:3px;
     background: white;
     display: inline-block;
     position: absolute;
     border-radius: 50%;
-    border: 3px solid #22c0e8;
-    left: 20px;
-    width: 20px;
-    height: 20px;
+    border: 2px solid #FFA99F;
+    left: -12px;
+    width: 15px;
+    height: 15px;
     z-index: 400;
+  
 }
+
 /* vong tron phan tram */
 
   
@@ -131,16 +150,14 @@ ul.timeline > li:before {
   
  
  section p {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 30em;
+
     text-align: center;
   }
   
   .arrow {
     border: 2em solid transparent;
     height: 0;
-    margin: 50vh auto;
+
     width: 0;
   }
   
@@ -200,15 +217,49 @@ ul.timeline > li:before {
   /* Secondary */
   
   svg.radial-progress:nth-of-type(6n+2) circle { stroke: #83e4e2; }
+
   
-  /* Tertiary */
+  .skills-bar ul {
+    list-style-type: none;
+  }
   
-  svg.radial-progress:nth-of-type(6n+3) circle { stroke: #fd6470; }
   
-  /* Quaternary */
+
+  .skills-bar {
+    margin: 0 auto;
   
-  svg.radial-progress:nth-of-type(6n+4) circle { stroke: #fca858; }
+  }
   
-  /* Quinary */
+  .skills-bar ul li {
+      position: relative;
+      margin-bottom: 20px;
+      padding-left: 6px;
+    }
+      .bar-container,
+      .bar {  
+        position: absolute;
+        left: 0;
+        height: 5px;  
+        border-radius: 5px;
+        content: "";
+      }
   
-  svg.radial-progress:nth-of-type(6n+5) circle { stroke: #fddc32; }
+      .bar-container {
+        bottom: -8px;
+        width: 100%;
+        background-color: #333;
+        text-align: right;
+      }
+        .bar {
+          top: 0;
+        }
+  
+        .pct {
+          position: absolute;
+          top: -19px;
+          right: 0;
+          opacity: 0;
+          transition: opacity 0.3s linear;
+          display: none;
+        }
+  
