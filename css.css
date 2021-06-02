@@ -13,7 +13,11 @@
     /* background: #ef9a9a; */
     height: 670px;
     text-align: left;
-    overflow: auto;
+    background-color: #fdfdfd;
+    box-shadow: 0 4px 28px rgba(123,151,158,.25);
+    border: 1px solid #d6dee1;
+    padding: 1rem;
+    overflow: scroll;
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 body {
@@ -77,7 +81,7 @@ body{
     margin-bottom:30px;
    
 }
-.right span {
+#title {
     color: #FF719A;
     margin-right: 10px;
     font-weight: bold;
@@ -102,10 +106,7 @@ body{
 .right h4 {
     font-weight: bold;
 }
-ul.timeline li span{
-    color:gray !important;
 
-}
 
 /* timeline */
 ul.timeline {
@@ -177,7 +178,7 @@ ul.timeline > li:before {
   svg.radial-progress {
     height: auto;
     max-width: 90px;
-    padding: 1em;
+    padding: 0.8em;
     transform: rotate(-90deg);
     width: 100%;
 
@@ -212,11 +213,13 @@ ul.timeline > li:before {
   /*** COLORS ***/
   /* Primary */
   
-  svg.radial-progress:nth-of-type(6n+1) circle { stroke: #a2ed56; }
+  svg.radial-progress circle { 
+    stroke: #a2ed56; }
   
   /* Secondary */
   
-  svg.radial-progress:nth-of-type(6n+2) circle { stroke: #83e4e2; }
+  svg.radial-progress circle {
+     stroke: #83e4e2; }
 
   
   .skills-bar ul {
@@ -262,4 +265,48 @@ ul.timeline > li:before {
           transition: opacity 0.3s linear;
           display: none;
         }
-  
+ /* Experience */
+ .timeproject {
+   color: gray;
+
+ }
+ .titleproject {
+  text-transform: capitalize;
+  font-weight: bold;
+
+}
+ .code {
+   margin-top: 25px;
+   padding: 10px;
+   margin-left: -20px;
+
+ }
+ .code span{
+text-transform: capitalize;
+}
+.timeline li a {
+  text-decoration: none;
+  color:#FF719A;
+}
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+::-webkit-scrollbar-button {
+
+  height: 200px; 
+}
