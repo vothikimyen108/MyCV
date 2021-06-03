@@ -15,10 +15,12 @@
         integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
         crossorigin="anonymous"></script>
     <title>Vo Thi Kim Yen</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="css.css">
+    <script src="./js.js"></script>
 </head>
 
-<body>
+<body onload="myFunction()">
     <div class="cv">
         <div style="margin: 0px auto;">
             <div class="row">
@@ -62,14 +64,17 @@
                     <div class="row">
                         <div class="col ">
                             <h3>Photos<span class="title"> Collection</span></h3>
-                            <br>
-                            <p>I really keen on take photos, so this is my photos</p>
                         </div>
+                        <span>I really keen on take photos, so this is my photos</span>
                     </div>
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col ">
                             <div class="navbar">
                                 <ul>
+                                    <li><a href="#">All</a></li>
+                                    <li><a href="#">Sky</a></li>
+                                    <li><a href="#">All</a></li>
+                                    <li><a href="#">Sky</a></li>
                                     <li><a href="#">All</a></li>
                                     <li><a href="#">Sky</a></li>
                                 </ul>
@@ -173,11 +178,71 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="preview-box">
+                            <div class="details">
+                              <span class="title">Image <p class="current-img"></p> of <p class="total-img"></p></span>
+                              <span class="icon fas fa-times"></span>
+                            </div>
+                            <div class="image-box">
+                              <div class="slide prev"><i class="fas fa-angle-left"></i></div>
+                              <div class="slide next"><i class="fas fa-angle-right"></i></div>
+                              <img src="" alt="">
+                            </div>
+                          </div>
+                          <div class="shadow"></div>
                     </div>
                 </div>
+            </div> -->
+                    <div class="wrapper">
+                        <div class="gallery">
+                            <div class="image">
+                                <span>
+                                    <img src="./img/photo/hoadai8.jpg" alt="">
+                                </span>
+                                                                    <div class="overlay">
+                                        <div class="layout">
+                                           <a href="#"><span>View</span></a> 
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="image">
+                                <span>
+                                    <img src="./img/photo/hoadai8.jpg" alt="">
+                                </span>
+                                                                    <div class="overlay">
+                                        <div class="layout">
+                                           <a href="javascript:;" onclick="load()" ><span>View</span></a> 
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="image">
+                                <span>
+                                    <img src="./img/photo/hoadai8.jpg" alt="">
+                                </span>
+                                                                    <div class="overlay">
+                                        <div class="layout">
+                                           <a href="#"><span>View</span></a> 
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="preview-box">
+                        <div class="details">
+                            <span class="title">Image <p class="current-img"></p> of <p class="total-img"></p></span>
+                            <span class="icon fas fa-times"></span>
+                        </div>
+                        <div class="image-box">
+                            <div class="slide prev"><i class="fas fa-angle-left"></i></div>
+                            <div class="slide next"><i class="fas fa-angle-right"></i></div>
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                    <div class="shadow"></div>
+
+                    <script src="script.js"></script>
+                </div>
             </div>
-        </div>
-    </div>
 
 </body>
 
