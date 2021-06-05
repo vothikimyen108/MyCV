@@ -7,7 +7,7 @@
     width: 90%;
     margin: 0 auto;
     margin-top: 2%;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .right {
     /* background: #ef9a9a; */
@@ -29,11 +29,13 @@ body {
     width: 200px;
     height: 200px;
     border-radius: 200px;
+    border: 3px solid #fff;
  
 }
 .vv img {
     transition: all 0.3s ease;
     cursor: pointer;
+ 
  
 }
 
@@ -403,11 +405,11 @@ text-transform: capitalize;
   transform: translate(-50%, -50%) scale(0.9);
   background: #fff;
   width: 600px;
-  z-index: 100;
   opacity: 0;
   pointer-events: none;
   border-radius: 3px;
   padding: 0 5px 5px 5px;
+    z-index: 400;
   box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
 }
 .preview-box.show{
@@ -581,11 +583,12 @@ text-transform: capitalize;
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
   background-color: #ef9a9a;
-  z-index: 300;
+  z-index: 200;
   border-radius: 100px;
   position: absolute; /* Important */
-  bottom: 33px; /* Position Y halfway in */
+  bottom: 32px; /* Position Y halfway in */
   left: 45%; /* Position X halfway in */
+  position: fixed;
   /* transform: translate(-50%,-50%);} */}
 .menu ul {
   list-style-type: none;
