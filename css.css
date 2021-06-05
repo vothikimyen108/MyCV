@@ -1,7 +1,7 @@
 .logo {
     /* background: #ef9a9a; */
     background-image: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);
-    height: 670px;
+    height: 600px;
 }
 .cv {
     width: 90%;
@@ -11,13 +11,14 @@
 }
 .right {
     /* background: #ef9a9a; */
-    height: 670px;
+    height: 600px;
     text-align: left;
     background-color: #fdfdfd;
     box-shadow: 0 4px 28px rgba(123,151,158,.25);
     border: 1px solid #d6dee1;
     padding: 1rem;
     overflow: scroll;
+    position: relative;
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 body {
@@ -572,5 +573,39 @@ text-transform: capitalize;
   letter-spacing: 1px;
   color: #00acc1;
 }
+/* menu */
+.menu {
+  width: 35%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: 80px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  background-color: #ef9a9a;
+  z-index: 300;
+  border-radius: 100px;
+  position: absolute; /* Important */
+  bottom: 12px; /* Position Y halfway in */
+  left: 45%; /* Position X halfway in */
+  /* transform: translate(-50%,-50%);} */}
+.menu ul {
+  list-style-type: none;
+  justify-content: center;
+  display: flex;
+}
+.menu ul li {
+  float: left;
+}
+.menu ul li a {
+  text-decoration: none;
+  color: #000;
+  padding: 10px 20px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+.menu a svg{
+  margin: 0 auto;
+}
+
 
 
