@@ -66,3 +66,8 @@ window.onload = ()=>{
     }
     
 }
+
+
+function onClickLink() {
+
+}
