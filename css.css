@@ -651,4 +651,52 @@ text-transform: capitalize;
   background-color: #ef9a9a;  
 
 }
-
+.tabs .tab-header {
+  height:60px;
+  display:flex;
+  align-items:center;
+}
+.tabs .tab-header > div {
+  width:100px;
+  text-align:center;
+  color:#888;
+  font-weight:600;
+  cursor:pointer;
+  font-size:14px;
+  text-transform:uppercase;
+  outline:none;
+}
+.tabs .tab-header > div > i {
+  display:block;
+  margin-bottom:5px;
+}
+.tabs .tab-header > div.active {
+  color: #FF719A;
+}
+.tabs .tab-indicator {
+  position:relative;
+  width:90px;
+  height:5px;
+  background: #FF719A;
+  left:5px;
+  border-radius:5px;
+  transition:all 500ms ease-in-out;
+}
+.tabs .tab-body {
+  position:relative;
+  height:calc(100% - 60px);
+  margin-top: 20px;
+}
+.tabs .tab-body > div {
+  position:absolute;
+  top:-200%;
+  opacity:0;
+  transform:scale(0.9);
+  transition:opacity 500ms ease-in-out 0ms,
+    transform 500ms ease-in-out 0ms;
+}
+.tabs .tab-body > div.active {
+  top:0px;
+  opacity:1;
+  transform:scale(1);
+}
