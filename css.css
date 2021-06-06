@@ -584,6 +584,7 @@ text-transform: capitalize;
   right: 50%;
   bottom: 32px;
   position: fixed; 
+
   } 
 
 .menu ul {
@@ -611,34 +612,29 @@ text-transform: capitalize;
   margin: 0 auto;
   width: 30px;
   height: 30px;
-  transition: all 10s;
-  
+  transition: all 0.5s ease-out;
+
 } 
 .menu a:hover span{
-    display: block;
-
-
+    opacity: 1;
 }
 .menu a:hover svg{
 
   margin: 0 auto;
-  width: 30px;
-  height: 30px;
   position: absolute;
   text-align: center;
-padding: 0;
+  padding: 0;
   top: -20px;
   left: 50px;
   z-index: 400;
-
-
 }
 
 .menu a span {
   text-align: center;
-  display: none;
+  opacity: 0;
   width: 80px;
-  
+  transition: all 0.5s ease-out;
+
 }
 .menu a span::before {
   content: "";
@@ -651,7 +647,8 @@ padding: 0;
   top: -40px;
   left: 30px;
   z-index: 100px;
+  transition: all 0.5s ease-out;
   background-color: #ef9a9a;  
-  transition: all 5s linear;
+
 }
 
