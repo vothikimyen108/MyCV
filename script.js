@@ -79,7 +79,7 @@ for(let i=0;i<tabsPane.length;i++){
     tabHeader.getElementsByClassName("active")[0].classList.remove("active");
     tabsPane[i].classList.add("active");
     tabBody.getElementsByClassName("active")[0].classList.remove("active");
-    tabBody.getElementsByTagName("div")[i].classList.add("active");
+    tabBody.getElementsByTagName("nav")[i].classList.add("active");
     
     tabIndicator.style.left = `calc(calc(100% / 8.5) * ${i})`;
   });

@@ -670,7 +670,7 @@ text-transform: capitalize;
   display:block;
   margin-bottom:5px;
 }
-.tabs .tab-header > div.active {
+.tabs .tab-header > nav.active {
   color: #FF719A;
 }
 .tabs .tab-indicator {
@@ -687,7 +687,7 @@ text-transform: capitalize;
   height:calc(100% - 60px);
   margin-top: 20px;
 }
-.tabs .tab-body > div {
+.tabs .tab-body > nav {
   position:absolute;
   top:-200%;
   opacity:0;
@@ -695,7 +695,7 @@ text-transform: capitalize;
   transition:opacity 500ms ease-in-out 0ms,
     transform 500ms ease-in-out 0ms;
 }
-.tabs .tab-body > div.active {
+.tabs .tab-body > nav.active {
   top:0px;
   opacity:1;
   transform:scale(1);
