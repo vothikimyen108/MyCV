@@ -50,7 +50,7 @@ window.onload = ()=>{
                     prevBtn.style.display = "block";
                 }
             }
-            document.querySelector("body").style.overflow = "hidden";
+            document.querySelector("body").style.overflow = "none";
             previewBox.classList.add("show"); 
             shadow.style.display = "block"; 
             closeIcon.onclick = ()=>{
@@ -59,7 +59,7 @@ window.onload = ()=>{
                 nextBtn.style.display = "block";
                 previewBox.classList.remove("show");
                 shadow.style.display = "none";
-                document.querySelector("body").style.overflow = "scroll";
+                // document.querySelector("body").style.overflow = "scroll";
             }
         }
         
