@@ -653,8 +653,19 @@ text-transform: capitalize;
   padding: 10px;
   border: 1px solid #FF719A;
   background-color:#FF719A ;
+  transition:all .5s ease-in-out;
 }
-
+.info a svg {
+  fill: #000;
+  opacity: 0;
+  transition:all .5s ease-in-out;
+}
+.info a:hover {
+  padding-right: 15px;
+}
+.info a:hover svg{
+  opacity: 1;
+}
 .list-blog {
   width: 100%;
   color: #000;
