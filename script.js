@@ -1,4 +1,5 @@
 //getting all required elements
+
 const gallery  = document.querySelectorAll(".image"),
 previewBox = document.querySelector(".preview-box"),
 previewImg = previewBox.querySelector("img"),
@@ -59,14 +60,13 @@ window.onload = ()=>{
                 nextBtn.style.display = "block";
                 previewBox.classList.remove("show");
                 shadow.style.display = "none";
-                // document.querySelector("body").style.overflow = "scroll";
+         
             }
         }
         
     }
     
 }
-
 
 let tabHeader = document.getElementsByClassName("tab-header")[0];
 let tabIndicator = document.getElementsByClassName("tab-indicator")[0];
@@ -82,5 +82,8 @@ for(let i=0;i<tabsPane.length;i++){
     tabBody.getElementsByTagName("nav")[i].classList.add("active");
     
     tabIndicator.style.left = `calc(calc(100% / 8.5) * ${i})`;
+
+
+    
   });
 }
