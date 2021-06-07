@@ -624,6 +624,7 @@ text-transform: capitalize;
   padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
   margin-bottom: 20px;
+  transition:all .5s ease-in-out;
 }
 .img {
   width: 50%;
@@ -631,6 +632,11 @@ text-transform: capitalize;
 }
 .img img {
   width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.img img:hover {
+  transform: scale(1.01);
 }
 .info {
   width: 50%;
@@ -650,6 +656,7 @@ text-transform: capitalize;
 .info a {
   text-decoration: none;
   color: #000;
+  width: 1px;
   padding: 10px;
   border: 1px solid #FF719A;
   background-color:#FF719A ;
@@ -670,5 +677,10 @@ text-transform: capitalize;
   width: 100%;
   color: #000;
 }
+.blog:hover {
+  transform: scale(1.01);
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
 
 
