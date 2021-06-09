@@ -9,6 +9,10 @@
     margin-top: 3rem;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+.left h1{
+  font-size: 30px;
+}
+
 .right {
     /* background: #ef9a9a; */
     height: 600px;
@@ -24,6 +28,7 @@ body {
     font-family: 'Roboto', sans-serif;
 
 }
+
 .profile-circel-image-200 img {
     width: 200px;
     height: 200px;
@@ -56,6 +61,7 @@ body {
 .left {
     position: relative;
     text-align: center;
+    padding-top: 4rem;
 }
 .Left-footder {
     position: absolute;
@@ -476,17 +482,7 @@ text-transform: capitalize;
   background: rgba(0,0,0,0.45);
 }
 
-@media(max-width: 1000px){
-  .gallery .image{
-    width: calc(100% / 2);
-  }
-}
-@media(max-width: 600px){
-  .gallery .image{
-    width: 100%;
-    padding: 4px;
-  }
-}
+
 .menu {
    width: 35%;
   box-shadow: 0 10px 30px rgba(#414856, 0.05);
@@ -496,7 +492,7 @@ text-transform: capitalize;
   background-color: #ef9a9a;
   border-radius: 100px;
   bottom: 0; 
-  left: 32%; 
+  left: 40%; 
    top: 91%;
   right: 50%;
   bottom: 32px;

@@ -1,0 +1,78 @@
+@media(max-width: 1000px){
+    .gallery .image{
+      width: calc(100% / 2);
+    }
+  }
+  @media(max-width: 600px){
+    .gallery .image{
+      width: 100%;
+      padding: 4px;
+    }
+  }
+
+  @media(max-width:800px){
+      /* page index */
+    .cv {
+        margin-top: 12rem;
+        width: 90%;
+    }
+    /* menu */
+    .menu {
+        width: 55%;
+       height:60px;
+       left: 33%; 
+        top: 78%;   
+    } 
+       .menu a svg{
+        width: 30px;
+        height: 30px;     
+      } 
+      .menu a:hover span{
+          opacity: 1;
+      }
+      .menu a:hover svg{
+      
+        margin: 0 auto;
+        position: absolute;
+        text-align: center;
+        padding: 0;
+        top: -20px;
+        left: 27px;
+        z-index: 400;
+      }
+      
+      .menu a span {
+        width: 50px;
+   
+      }
+      .menu a span::before {
+        top: -40px;
+        left: 10px;
+     
+      }
+/* 
+      page index */
+
+      .profile-circel-image-200 img {
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        border: 3px solid #fff;
+     
+    }
+    .left h1{
+        font-size: 20px;
+    }
+    #work {
+        font-size: 16px;
+    }
+    .Left-footder {
+        padding: 10px;
+    }
+    .Left-footder span {
+        font-size: 12px;
+    }
+    .left {
+        padding-top: 8rem;
+    }
+  } 
