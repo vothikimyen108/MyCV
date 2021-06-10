@@ -293,7 +293,7 @@ width:calc(100%/5);
    }
    .right {
        width: 100%;
-       height:800px;
+       height: 800px;
       padding: 2rem;
       }
   #hideleft {
@@ -335,7 +335,9 @@ width:calc(100%/5);
   display: flex;
   flex-direction: column;
 }
- 
+.list-blog {
+  margin-bottom: 50px;
+}
 .info {
     padding: 10px;
 }
