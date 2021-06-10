@@ -1,15 +1,18 @@
 
-document.getElementById("hideleft").onclick = function() {
-   document.getElementsByClassName("left")[0].style.display = "block";
-   document.getElementById("hideleft").style.display ="none"
-   document.getElementById("showleft").style.display ="block"
+document.getElementById("hideleft").onclick = function () {
+    document.getElementsByClassName("left")[0].style.display = "block";
+    //    logo col-3 left animate__animated animate__fadeInLeft
+    const element = document.querySelector('.left');
+    element.classList.add('animate__animated', 'animate__fadeInLeft');
+    document.getElementById("hideleft").style.display = "none"
+    document.getElementById("showleft").style.display = "block"
 }
 
-document.getElementById("showleft").onclick = function() {
+document.getElementById("showleft").onclick = function () {
     document.getElementsByClassName("left")[0].style.display = "none";
-    document.getElementById("showleft").style.display ="none"
-    document.getElementById("hideleft").style.display ="block"
- }
+    document.getElementById("showleft").style.display = "none"
+    document.getElementById("hideleft").style.display = "block"
+}
 //getting all required elements
 
 const gallery = document.querySelectorAll(".image"),
@@ -99,7 +102,7 @@ window.onload = () => {
         }
 
 
-    }else {
+    } else {
         let tabHeader = document.getElementsByClassName("tab-header")[0];
         let tabIndicator = document.getElementsByClassName("tab-indicator")[0];
         let tabBody = document.getElementsByClassName("tab-body")[0];

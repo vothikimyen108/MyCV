@@ -14,6 +14,10 @@
 .left h1{
   font-size: 30px;
 }
+.listicon svg{
+  width: 20px;
+  height: 20px;
+}
 #hideleft , #showleft {
   display: none;
 }
@@ -500,13 +504,14 @@ text-transform: capitalize;
   background-color: #ef9a9a;
   border-radius: 100px;
   bottom: 0; 
-  left: 40%; 
+  left: 42%; 
    top: 91%;
   right: 50%;
   bottom: 32px;
   position: fixed; 
 
   } 
+
 
 .menu ul {
   list-style-type: none;
