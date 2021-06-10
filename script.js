@@ -1,3 +1,15 @@
+
+document.getElementById("hideleft").onclick = function() {
+   document.getElementsByClassName("left")[0].style.display = "block";
+   document.getElementById("hideleft").style.display ="none"
+   document.getElementById("showleft").style.display ="block"
+}
+
+document.getElementById("showleft").onclick = function() {
+    document.getElementsByClassName("left")[0].style.display = "none";
+    document.getElementById("showleft").style.display ="none"
+    document.getElementById("hideleft").style.display ="block"
+ }
 //getting all required elements
 
 const gallery = document.querySelectorAll(".image"),
@@ -79,7 +91,7 @@ window.onload = () => {
                 tabBody.getElementsByClassName("active")[0].classList.remove("active");
                 tabBody.getElementsByTagName("nav")[i].classList.add("active");
 
-                tabIndicator.style.left = `calc(calc(100% / 8) * ${i})`;
+                tabIndicator.style.left = `calc(calc(100% / 8.5) * ${i})`;
 
 
 
@@ -109,5 +121,6 @@ window.onload = () => {
         }
 
     }
+
 
 }
