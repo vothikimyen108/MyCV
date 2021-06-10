@@ -76,10 +76,7 @@
 .contact p{
     margin-left: 0px;
  }
-/* page ablum */
-.preview-box{
-left: 50%;
-}
+
 /* page blog */
 .blog {
 width: 100%;
@@ -324,7 +321,7 @@ width:calc(100%/5);
   }
 /* page ablum */
 .preview-box{
-  left: 50%;
+  left: 52%;
   width: 90%;
   height: 63%;
 }
