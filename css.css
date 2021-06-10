@@ -9,6 +9,7 @@
     margin: 0 auto;
     margin-top: 3rem;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    overflow: hidden;
 }
 .left h1{
   font-size: 30px;
@@ -677,6 +678,7 @@ text-transform: capitalize;
 .list-blog {
   width: 100%;
   color: #000;
+  margin: 0 auto;
 }
 .blog:hover {
   transform: scale(1.01);

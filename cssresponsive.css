@@ -72,7 +72,7 @@
   .preview-box{
     left: 50%;
   }
-
+/* page blog */
   .blog {
     width: 100%;
     display: flex;
@@ -94,9 +94,9 @@
 
 
   @media(max-width:600px){
-     body {
+     /* body {
         position: fixed;
-     }
+     } */
     /* page index */
   .cv {
       margin-top: 0rem;
@@ -215,9 +215,20 @@
     width: 100%;
 }
 .info {
-    width: 100%;
-    text-align: center;
+    padding: 10px;
 }
+.info span{
+  padding: 10px;
+  margin-right: 1px;
+}
+
+.info p {
+  white-space: nowrap; 
+  width: 250px; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* page album */
 .tabs .tab-indicator {
   width:calc(100%/5);
 
