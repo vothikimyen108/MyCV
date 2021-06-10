@@ -177,7 +177,12 @@ width:calc(100%/5);
   /* page ablum */
   .preview-box{
     left: 50%;
+    width: 90%;
+    height: 83%;
   }
+  .preview-box .image-box{
+    height:90%;
+   }
 /* page blog */
   .blog {
     width: 100%;
@@ -323,15 +328,16 @@ width:calc(100%/5);
   width: 90%;
   height: 63%;
 }
-
+.preview-box .image-box{
+  height:90%;
+ }
+ /* page blog */
 .blog {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-.preview-box .image-box{
- height:90%;
-} 
+ 
 .info {
     padding: 10px;
 }
