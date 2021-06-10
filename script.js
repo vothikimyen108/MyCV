@@ -113,7 +113,7 @@ window.onload = () => {
                 tabBody.getElementsByClassName("active")[0].classList.remove("active");
                 tabBody.getElementsByTagName("nav")[i].classList.add("active");
 
-                tabIndicator.style.left = `calc(calc(100% / 4) * ${i})`;
+                tabIndicator.style.left = `calc(calc(100% / 3.8) * ${i})`;
 
 
 

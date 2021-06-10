@@ -182,8 +182,7 @@
    .right {
        width: 100%;
        height:800px;
-        padding-left: 2rem;
-        padding-top:2rem;
+      padding: 2rem;
       }
   #hideleft , #showleft{
     position: fixed;
@@ -224,11 +223,37 @@
 
 }
 
+.tabs .tab-header {
+  height:50px;
+  display:flex;
+  align-items:center;
+}
+.tabs .tab-header > div {
+  width:80px;
+}
+.gallery {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content: space-evenly;
+}
+.image {
+  width: 30%;
+  position: relative;
+  margin-left: 5%;
+  height: 20%;
+  margin-bottom: 5%;
+  
+}
+
+
+  /* page resumme */
 .code {
     font-weight: 10px;
  
   }
-  /* page resumme */
+
   .col {
     flex: none;
   }
@@ -242,4 +267,5 @@
     margin-left: -30px;
  
   }
+
 } 
