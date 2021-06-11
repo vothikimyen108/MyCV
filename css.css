@@ -488,9 +488,8 @@ text-transform: capitalize;
 
 
 .menu {
-   /* width: 80px; */
+
   box-shadow: 0 10px 30px rgba(#414856, 0.05);
-  /* height:400px; */
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
   background-color: #ef9a9a;
@@ -523,6 +522,7 @@ text-transform: capitalize;
   margin: 0 auto;
   width: 30px;
   height: 30px;
+
 } 
 
 .menu a:hover svg {
@@ -544,6 +544,7 @@ text-transform: capitalize;
   opacity: 0;
   transition: all 0.5s ease-out;
 }
+
 /* .menu a span::after {
   content: " ";
   width: 0;
