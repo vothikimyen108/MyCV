@@ -563,7 +563,6 @@ text-transform: capitalize;
 .tabs .tab-header > div {
   width:100px;
   text-align:center;
-  color:#888;
   font-weight:600;
   cursor:pointer;
   font-size:14px;
@@ -574,18 +573,11 @@ text-transform: capitalize;
   display:block;
   margin-bottom:5px;
 }
-.tabs .tab-header > nav.active {
+.active{
   color: #FF719A;
+  transition: all 0.5s ease;
 }
-.tabs .tab-indicator {
-  position:relative;
-  width:90px;
-  height:5px;
-  background: #FF719A;
-  left:5px;
-  border-radius:5px;
-  transition:all 500ms ease-in-out;
-}
+
 .tabs .tab-body {
   position:relative;
   height:calc(100% - 60px);
