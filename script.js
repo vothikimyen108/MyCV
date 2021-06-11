@@ -20,8 +20,8 @@ const gallery = document.querySelectorAll(".image"),
     previewImg = previewBox.querySelector("img"),
     closeIcon = previewBox.querySelector(".icon"),
     currentImg = previewBox.querySelector(".current-img"),
-    totalImg = previewBox.querySelector(".total-img"),
-    shadow = document.querySelector(".shadow");
+    totalImg = previewBox.querySelector(".total-img");
+
 
 window.onload = () => {
     for (let i = 0; i < gallery.length; i++) {
@@ -68,14 +68,12 @@ window.onload = () => {
             }
             document.querySelector("body").style.overflow = "none";
             previewBox.classList.add("show");
-            shadow.style.display = "block";
+   
             closeIcon.onclick = () => {
                 newIndex = clickedImgIndex; //assigning user first clicked img index to newIndex
                 prevBtn.style.display = "block";
                 nextBtn.style.display = "block";
                 previewBox.classList.remove("show");
-                shadow.style.display = "none";
-
             }
         }
 
