@@ -544,7 +544,6 @@ text-transform: capitalize;
 .tabs .tab-header {
   display: flex;
   flex-wrap: nowrap;
-  padding: 10px;
   justify-content: center;
   
 }
