@@ -318,12 +318,7 @@
     width: 250px;
   }
 }
-@media (max-height: 850px){
-  .right {
-    height: 800px;
-}
-}
-@media(max-height:750px) {
+@media(max-height:721px) {
   .right {
     height: 700px;
   }
