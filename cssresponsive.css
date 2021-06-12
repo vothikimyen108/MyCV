@@ -309,7 +309,7 @@
 }
 @media(max-width:400px) {
   .right {
-    height: 800px;
+    height: 700px;
   }
   .tabs .tab-header>div {
     padding: 10px 10px;
