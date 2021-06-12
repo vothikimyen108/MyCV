@@ -333,10 +333,6 @@ text-transform: capitalize;
   margin-left: 20px;
   margin-bottom: 20px;
 }
-.right h4 {
-  text-transform: capitalize;
-  padding: 10px;
-}
 /* album */
 .navbar {
   padding: 0;
@@ -359,11 +355,11 @@ text-transform: capitalize;
   display: flex;
   flex-direction: row;
   flex-wrap:wrap;
-  justify-content: space-evenly;
+  /* justify-content: space-between; */
 }
 .image {
   width: 20%;
-  margin-left: 5%;
+  margin-right: 5%;
   height: 20%;
   margin-bottom: 5%;
   position: relative;
@@ -415,10 +411,9 @@ text-transform: capitalize;
 .preview-box{
   position: fixed;
   top: 50%;
-  left: 50%;
+  left: 60%;
   transform: translate(-50%, -50%) scale(0.9);
   background: #fff;
-  width: 600px;
   opacity: 0;
   pointer-events: none;
   border-radius: 3px;
@@ -546,29 +541,22 @@ text-transform: capitalize;
   transition: all 0.5s ease-out;
 }
 
-/* .menu a span::after {
-  content: " ";
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-left: 10px solid #ef9a9a;
-  border-bottom: 10px solid transparent;
-  background-color: white;
-
-} */
 .tabs .tab-header {
-  height:60px;
-  display:flex;
-  align-items:center;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 10px;
+  justify-content: center;
+  
 }
 .tabs .tab-header > div {
-  width:100px;
-  text-align:center;
+  width:auto;
+  padding: 10px 20px;
+  height: auto;
+  text-align:left;
   font-weight:600;
   cursor:pointer;
   font-size:14px;
   text-transform:uppercase;
-  outline:none;
 }
 .tabs .tab-header > div > i {
   display:block;
@@ -581,8 +569,8 @@ text-transform: capitalize;
 
 .tabs .tab-body {
   position:relative;
-  height:calc(100% - 60px);
-  margin-top: 20px;
+  height:100%;
+  margin-top: 10px;
 }
 .tabs .tab-body > nav {
   position:absolute;

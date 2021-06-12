@@ -472,8 +472,8 @@ flex-direction: column;
   }
 /* page ablum */
 .preview-box{
-  left: 52%;
-  width: 90%;
+  left: 50%;
+  width: 100%;
   height: 63%;
   top:48%;
 }
@@ -509,14 +509,11 @@ flex-direction: column;
 
 }
 
-.tabs .tab-header {
-  height:50px;
+/* .tabs .tab-header {
   display:flex;
-  align-items:center;
-}
-.tabs .tab-header > div {
-  width:80px;
-}
+  align-items:left;
+} */
+
 .gallery {
   width: 100%;
   display: flex;
