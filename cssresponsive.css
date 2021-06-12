@@ -318,6 +318,11 @@
     width: 250px;
   }
 }
+@media(height:812px) {
+  .right {
+    height: 812px;
+  }
+}
 @media(max-height:700px) {
   .right {
     height: 700px;

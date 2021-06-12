@@ -356,7 +356,6 @@ text-transform: capitalize;
   display: flex;
   flex-direction: row;
   flex-wrap:wrap;
-  margin-bottom: 10rem;
   /* justify-content: space-between; */
 }
 .image {
