@@ -1,6 +1,6 @@
 
   var loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
   setTimeout(function () {
-    window.location="./Home.html";
+    window.location="./Pages/Home.html";
   }, 2000);
 

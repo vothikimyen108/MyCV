@@ -14,8 +14,8 @@
         integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
         crossorigin="anonymous"></script>
     <title>Vo Thi Kim Yen</title>
-    <link rel="stylesheet" href="css.css">
-    <link rel="stylesheet" href="./cssresponsive.css">
+    <link rel="stylesheet" href="../css/Main.css">
+    <link rel="stylesheet" href="../css/Responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
@@ -26,7 +26,7 @@
                 <div class="logo col-3 left">
                     <div class="text-center">
                         <div class=" vv profile-circel-image-200">
-                            <img src="img/yen.jpg" class="img-fluid rounded-circle">
+                            <img src="../img/yen.jpg" class="img-fluid rounded-circle">
                         </div>
                         <br>
                         <h1 class="fw-bold">Võ Thị Kim Yến </h1>
@@ -332,19 +332,13 @@
         </div>
     </div>
 </body>
-<script src="./script.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
     crossorigin="anonymous"></script>
 <script>
     $(function () {
 
-        // // Remove svg.radial-progress .complete inline styling
-        // $('svg.radial-progress').each(function (index, value) {
-        //     $(this).find($('circle.complete')).removeAttr('style');
-        // });
-
-        // Activate progress animation on scroll
+       // Activate progress animation on scroll
         $(window).scroll(function () {
             $('svg.radial-progress').each(function (index, value) {
                 // If svg.radial-progress is approximately 25% vertically into the window when scrolling from the top or the bottom
@@ -427,5 +421,5 @@
     })();
 
 </script>
-<script async defer src="script.js"></script>
+<script async defer src="../js/script.js"></script>
 </html>

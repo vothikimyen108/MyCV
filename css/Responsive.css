@@ -254,13 +254,16 @@
     padding: 10px 15px;
   }
   .info p {
-    width: 250px;
+    width: 240px;
   }
 }
 
 @media(max-width:380px) {
   .Left-footder {
     bottom: 5%;
+  }
+  .know {
+    margin-left: 0;
   }
 }
 
