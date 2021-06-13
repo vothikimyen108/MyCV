@@ -2,13 +2,16 @@
 document.getElementById("hideleft").onclick = function () {
     document.getElementsByClassName("left")[0].style.display = "block";
     //    logo col-3 left animate__animated animate__fadeInLeft
+    document.getElementsByClassName("right")[0].style.display = "none";
     const element = document.querySelector('.left');
     element.classList.add('animate__animated', 'animate__fadeInLeft');
     document.getElementById("hideleft").style.display = "none"
     document.getElementById("showleft").style.display = "block"
+
 }
 
 document.getElementById("showleft").onclick = function () {
+    document.getElementsByClassName("right")[0].style.display = "block";
     document.getElementsByClassName("left")[0].style.display = "none";
     document.getElementById("showleft").style.display = "none"
     document.getElementById("hideleft").style.display = "block"
