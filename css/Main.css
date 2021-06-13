@@ -706,7 +706,9 @@ svg.radial-progress circle {
   color : #000;
   margin: 0 auto;
 }
-
+.blog {
+  transition: all .5s ease-in-out;
+}
 .blog:hover {
   transform : scale(1.01);
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
