@@ -15,17 +15,17 @@
         integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
         crossorigin="anonymous"></script>
     <title>Vo Thi Kim Yen</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="css.css">
     <link rel="stylesheet" href="./cssresponsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./load.css">
 </head>
 
 <body>
-    <div class="cv">
-        <div>
+    <div class="cv ">
+        <div style="margin: 0px auto;">
             <div class="row">
-                <div class="logo col-3 left">
+                <div class="logo col-3 left " id="result">
                     <div class="text-center">
                         <div class=" vv profile-circel-image-200">
                             <img src="img/yen.jpg" class="img-fluid rounded-circle">
@@ -61,108 +61,95 @@
                         </div>
                     </div>
                     <div id="showleft">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                          </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                            class="bi bi-x-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                            <path
+                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                        </svg>
                     </div>
                 </div>
-                <div class="right col-9 tilt-in-fwd-tr">
+                <div class="right col-9 flip-in-diag-2-br">
                     <div class="hideleft" id="hideleft">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-                          </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                            class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                        </svg>
                     </div>
-                    <div class="row">
-                        <div class="col ">
-                            <h3>My<span class="title"> Blog</span></h3>
-                        </div>
-                    </div>
-                    <div class="row  p-3 list-blog">
-                        <div class="blog" style="display: flex; margin-bottom: 20px;   box-shadow      : rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;">
-                            <div class="img"><img src="./img/github-logo.png" alt=""></div>
-                            <div class="info">
-                                <p><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" 
-                                        class="bi bi-calendar-check" viewBox="0 0 16 16">
-                                        <path
-                                            d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
-                                        <path
-                                            d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
-                                    </svg> <span>2002-1-1</span>
-
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" 
-                                        class="bi bi-person-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                                    </svg>
-                                    <span>Kim Yến</span>
-                                </p>
-                                <h6>Blog 1: cách sống vui vẻ</h6>
-                                <p> Con chim gay hien lanh beo nuc. Doi mät nau tram ngam ngo ngac nhin xa. Cai bung min
-                                    muot, co quang chiec tap de cong nhan day hat cudm lap lanh, bieng biec.</p>
-                                <a href="#">Read more <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"  class="bi bi-chevron-double-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
-                                    <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
-                                  </svg></a>
+                    <div class="container-cover">
+                        <div class="row ">
+                            <div class="col d-flex justify-content-start topic">
+                                <h3>About <span class="title">Me</span></h3>
                             </div>
                         </div>
-                        <div class="blog"  style="display: flex; margin-bottom: 20px;   box-shadow      : rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;">
-                            <div class="img"><img src="./img/github-logo.png" alt=""></div>
-                            <div class="info">
-                                <p><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" 
-                                        class="bi bi-calendar-check" viewBox="0 0 16 16">
-                                        <path
-                                            d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
-                                        <path
-                                            d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
-                                    </svg> <span>2002-1-1</span>
-
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" 
-                                        class="bi bi-person-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                                    </svg>
-                                    <span>Kim Yến</span>
+                        <div class="row ">
+                            <div class="col context-topic">
+                                <p> Welcome to my website. My name is Yen,  I’m a Junior Student at Ho Chi Minh City Open University, majoring in information technology. I love websites. Now I’m trying my best to learn front-end to back-end. <br>
+                                    My favorite quote is: <br><span class="title">”When you want something all the universe conspires in helping you to achieve it”</span>
                                 </p>
-                                <h6>Blog 1: cách sống vui vẻ</h6>
-                                <p> Con chim gay hien lanh beo nuc. Doi mät nau tram ngam ngo ngac nhin xa. Cai bung min
-                                    muot, co quang chiec tap de cong nhan day hat cudm lap lanh, bieng biec.</p>
-                                <a href="#">Read more <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"  class="bi bi-chevron-double-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
-                                    <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
-                                  </svg></a>
+                            </div>
+                            <div class="col contact">
+                                <p><span class="title">Age</span> 21</p>
+                                <p><span class="title">Address</span>Nguyễn Du, Quận Gò Vấp, TPHCM, VN </p>
+                                <p><span class="title">E-mail</span> voyen.vtk@gmail.com</p>
+                                <p><span class="title">Phone</span> 0945320117</p>
                             </div>
                         </div>
-                        <div class="blog"  style="display: flex; margin-bottom: 20px;   box-shadow      : rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;">
-                            <div class="img"><img src="./img/github-logo.png" alt=""></div>
-                            <div class="info">
-                                <p><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" 
-                                        class="bi bi-calendar-check" viewBox="0 0 16 16">
-                                        <path
-                                            d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
-                                        <path
-                                            d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
-                                    </svg> <span>2002-1-1</span>
-
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" 
-                                        class="bi bi-person-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                                    </svg>
-                                    <span>Kim Yến</span>
-                                </p>
-                                <h6>Blog 1: cách sống vui vẻ</h6>
-                                <p> Con chim gay hien lanh beo nuc. Doi mät nau tram ngam ngo ngac nhin xa. Cai bung min
-                                    muot, co quang chiec tap de cong nhan day hat cudm lap lanh, bieng biec.</p>
-                                <a href="#">Read more <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"  class="bi bi-chevron-double-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
-                                    <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
-                                  </svg></a>
-                            </div>
-                        </div>
-
                     </div>
-                    
+                    <div class="container-cover ">
+                        <div class="row">
+                            <div class="col d-flex justify-content-start topic">
+                                <h3>What <span class="title">I Do</span></h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="featured-3">
+                                <div class="row g-4 py-1 row-cols-1 row-cols-lg-3">
+                                    <div class="feature col">
+                                        <div class="idoicon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                                                fill="#FF719A" class="bi bi-window-dock" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M15 5H1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5zm0-1H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v1zm1-1a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3z" />
+                                                <path
+                                                    d="M3 11.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm4 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm4 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z" />
+                                            </svg>
+                                        </div>
+                                        <h4>Web Development</h4>
+                                        <p>I can develop websites implement application features, and integrate security.</p>
+                                    </div>
+                                    <div class="feature col">
+                                        <div class="idoicon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="55" height="50"
+                                                fill="#FF719A" class="bi bi-window" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M2.5 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm1 .5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z" />
+                                                <path
+                                                    d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm13 2v2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zM2 14a1 1 0 0 1-1-1V6h14v7a1 1 0 0 1-1 1H2z" />
+                                            </svg>
+                                        </div>
+                                        <h4>App Development</h4>
+                                        <p>I can create an app for computers, mobile phones.</p>
+                                    </div>
+                                    <div class="feature col">
+                                        <div class="idoicon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                                                fill="#FF719A" class="bi bi-code-square" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                                <path
+                                                    d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0zm2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z" />
+                                            </svg>
+                                        </div>
+                                        <h4>Design Website</h4>
+                                        <p>I can design beautiful, modern websites that meet customer requirements.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
                 <div class="menu">
                     <ul>
@@ -210,8 +197,6 @@
             </div>
         </div>
     </div>
-    </div>
-
+    <script async defer src="script.js"></script>
 </body>
-<script async defer src="script.js"></script>
 </html>
