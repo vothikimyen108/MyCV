@@ -1,55 +1,52 @@
+//hiện thông tin giới thiệu
 document.getElementById("hideleft").onclick = function () {
     document.getElementsByClassName("left")[0].style.display = "block";
-    //    logo col-3 left animate__animated animate__fadeInLeft
     document.getElementsByClassName("right")[0].style.display = "none";
     const element = document.querySelector('.left');
     element.classList.add('animate__animated', 'animate__fadeInLeft');
     document.getElementById("hideleft").style.display = "none"
     document.getElementById("showleft").style.display = "block"
-
 }
-
+//ẩn ẩn thông tin, show thông tin các trang khac
 document.getElementById("showleft").onclick = function () {
     document.getElementsByClassName("right")[0].style.display = "block";
     document.getElementsByClassName("left")[0].style.display = "none";
     document.getElementById("showleft").style.display = "none"
     document.getElementById("hideleft").style.display = "block"
 }
-//getting all required elements
-
+//hiện thị ảnh
+//khai báo các biến
 const gallery = document.querySelectorAll(".image"),
     previewBox = document.querySelector(".preview-box"),
     previewImg = previewBox.querySelector("img"),
     closeIcon = previewBox.querySelector(".icon"),
     currentImg = previewBox.querySelector(".current-img"),
     totalImg = previewBox.querySelector(".total-img");
-
-
 window.onload = () => {
     for (let i = 0; i < gallery.length; i++) {
-        totalImg.textContent = gallery.length; //passing total img length to totalImg variable
-        let newIndex = i; //passing i value to newIndex variable
-        let clickedImgIndex; //creating new variable
-
+        totalImg.textContent = gallery.length; //lấy được các tổng các ảnh hiện có
+        let newIndex = i; //khỏi tạo vị trí mới bằng i
+        let clickedImgIndex; //tạo một biến kick vào img thứ i
+        //khi ảnh thứ i được kích
         gallery[i].onclick = () => {
-            clickedImgIndex = i; //passing cliked image index to created variable (clickedImgIndex)
+            clickedImgIndex = i; 
             function preview() {
-                currentImg.textContent = newIndex + 1; //passing current img index to currentImg varible with adding +1
-                let imageURL = gallery[newIndex].querySelector("img").src; //getting user clicked img url
-                previewImg.src = imageURL; //passing user clicked img url in previewImg src
+                currentImg.textContent = newIndex + 1; //ảnh hiện tại đang mở ảnh newidex +1
+                let imageURL = gallery[newIndex].querySelector("img").src; //lấy src của ảnh đc click
+                previewImg.src = imageURL; //gắn vào thẻ img cần show
             }
-            preview(); //calling above function
-
+            preview(); //gọi hàm trên
+            //thực hiện code 2 nút bấm qua lại
             const prevBtn = document.querySelector(".prev");
             const nextBtn = document.querySelector(".next");
-            if (newIndex == 0) { //if index value is equal to 0 then hide prevBtn
+            if (newIndex == 0) { //if nếu ảnh thứ o đc mở
                 prevBtn.style.display = "none";
             }
-            if (newIndex >= gallery.length - 1) { //if index value is greater and equal to gallery length by -1 then hide nextBtn
+            if (newIndex >= gallery.length - 1) { //chỉ mục đang mở mà lớn hơn hoặc bằng độ dài các ảnh đang có thì ẩn bt next
                 nextBtn.style.display = "none";
             }
             prevBtn.onclick = () => {
-                newIndex--; //decrement index
+                newIndex--; //giảm chỉ muc
                 if (newIndex == 0) {
                     preview();
                     prevBtn.style.display = "none";
@@ -59,7 +56,7 @@ window.onload = () => {
                 }
             }
             nextBtn.onclick = () => {
-                newIndex++; //increment index
+                newIndex++; //tăng
                 if (newIndex >= gallery.length - 1) {
                     preview();
                     nextBtn.style.display = "none";
@@ -70,9 +67,9 @@ window.onload = () => {
             }
             document.querySelector("body").style.overflow = "none";
             previewBox.classList.add("show");
-   
+            //nếu nhấn nút tắt
             closeIcon.onclick = () => {
-                newIndex = clickedImgIndex; //assigning user first clicked img index to newIndex
+                newIndex = clickedImgIndex; 
                 prevBtn.style.display = "block";
                 nextBtn.style.display = "block";
                 previewBox.classList.remove("show");
@@ -80,6 +77,7 @@ window.onload = () => {
         }
 
     }
+    // mở tab mới trên ablum
     let tabHeader = document.getElementsByClassName("tab-header")[0];
     let tabBody = document.getElementsByClassName("tab-body")[0];
     let tabsPane = tabHeader.getElementsByTagName("div");

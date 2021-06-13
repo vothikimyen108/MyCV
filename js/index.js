@@ -1,5 +1,4 @@
-
-  var loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
+  //sau 2s chuyển sang trang home
   setTimeout(function () {
     window.location="./Pages/Home.html";
   }, 2000);
