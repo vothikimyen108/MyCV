@@ -14,6 +14,17 @@ document.getElementById("showleft").onclick = function () {
     document.getElementById("showleft").style.display = "none"
     document.getElementById("hideleft").style.display = "block"
 }
+document.getElementById('chk').onchange= function () {
+    // access properties using this keyword
+    if (this.checked) {
+       document.body.style.backgroundColor ="#292C35";
+       document.body.style.color ="#fdfdfd";
+
+    } else {
+        document.body.style.backgroundColor ="#fdfdfd";
+        document.body.style.color ="#555";
+    }
+};
 //hiện thị ảnh
 //khai báo các biến
 const gallery = document.querySelectorAll(".image"),
@@ -89,5 +100,4 @@ window.onload = () => {
             tabBody.getElementsByTagName("nav")[i].classList.add("active");        
         });
     }
-
 }
