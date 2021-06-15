@@ -26,7 +26,6 @@ function changeFFF() {
     document.body.style.color = "#555";
 }
 window.onload = () => {
-    alert(check)
     if (check == 'true') {
         changeDark();
         document.getElementById('chk').checked = true;
