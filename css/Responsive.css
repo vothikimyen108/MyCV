@@ -303,6 +303,9 @@
   .Toggle {
     right: 24%;
   }
+  .info-d nav {
+    padding: 0px;
+  }
 }
 
 @media(max-width:380px) {
@@ -335,6 +338,9 @@
     width: 18px;
     height: 18px;
   }
+  .info-d span {
+    padding: 0px;
+  }
 }
 @media(max-width:320px) {
   .Left-footder {
@@ -361,6 +367,7 @@
   .Toggle {
     right: 26%;
   }
+
 }
 
 @media(max-width:280px) {
@@ -400,5 +407,12 @@
   }
   .Toggle {
     right: 26%;
+  }
+  .info-d svg {
+    width: 15px;
+    height: 15px;
+  }
+  .info-d span {
+    font-size: 12px;
   }
 }
