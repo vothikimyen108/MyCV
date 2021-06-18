@@ -1,15 +1,15 @@
 [
     {
-        "id":"0",
-        "title": "Tìm hiểu Docker",
+        "id": "0",
+        "title": "Tiếng anh trong ngành IT",
         "img": "../img/github-logo.png",
         "author": "Kim Yến",
-        "createddate": "2021-1-1",
-        "subcontent": "Docker là một nền tảng để cung cấp cách để building",
-        "content": "Docker là một nền tảng để cung cấp cách để building, deploying và running ứng dụng dễ dàng hơn bằng cách sử dụng các containers (trên nền tảng ảo hóa). Ban đầu viết bằng Python, hiện tại đã chuyển sang Golang.Docker là một nền tảng để cung cấp cách để building, deploying và running ứng dụng dễ dàng hơn bằng cách sử dụng các containers (trên nền tảng ảo hóa). Ban đầu viết bằng Python, hiện tại đã chuyển sang Golang."
-    },
+        "createddate": "18-6-2021",
+        "subcontent": "Đây là những từ tiếng anh thông dụng mà mình tìm hiểu được trong ngành IT",
+        "content": "<p><em><strong>Đây là những từ tiếng anh thông dụng mà mình tìm hiểu được trong ngành IT( đang cập nhập)</strong></em></p><h3>Bài 1</h3><table><thead><tr><th>từ vựng</th><th>nghĩa</th></tr></thead><tbody><tr><td>App (application)/æplɪ’keɪʃn/</td><td>Ứng dụng 1 chương trình phần mềm cho phép người dùng thực hiện các công việc cụ thể như xử lý văn bản Word, email, kế toán, quản lý cơ sở dữ liệu…</td></tr><tr><td>engine</td><td>engine to be used for processing templates. Handlebars is the default.</td></tr><tr><td>ext</td><td>extension to be used for dest files.</td></tr></tbody></table>"
+         },
     {
-        "id":"1",
+        "id": "1",
         "title": "Tìm hiểu Docker 1",
         "img": "../img/github-logo.png",
         "author": "Kim Yến",

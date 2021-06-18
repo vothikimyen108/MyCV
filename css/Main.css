@@ -23,6 +23,7 @@ body {
 
 .left h1 {
   font-size: 30px;
+  text-align: center;
 }
 
 .listicon svg {
@@ -82,7 +83,10 @@ body {
 .left {
   position   : relative;
   text-align : center;
+  margin: 0 auto;
+  padding-left: 25px;
   padding-top: 5rem;
+  color: #000;
 }
 
 .Left-footder {
@@ -100,9 +104,7 @@ body {
 
 
 
-.left {
-  color: #000;
-}
+
 
 /* code right */
 
@@ -357,6 +359,7 @@ svg.radial-progress circle {
 .know {
   margin-left  : 20px;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 /* album */
@@ -776,7 +779,7 @@ svg.radial-progress circle {
 /* details blog */
 .detailBlog {
   width: 100%;
-  text-align: center;
+  /* text-align: center; */
 }
 .detailBlog img {
   width     : 100%;
@@ -801,6 +804,7 @@ svg.radial-progress circle {
   font-weight   : bold;
   color: #FF719A;
   padding: 10px;
+  text-align: center;
 }
 .info-d nav {
   text-align: center;
