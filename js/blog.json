@@ -10,11 +10,11 @@
          },
     {
         "id": "1",
-        "title": "Tìm hiểu Docker 1",
-        "img": "../img/github-logo.png",
+        "title": "Tìm hiểu Docker",
+        "img": "../img/blog2.jpg",
         "author": "Kim Yến",
-        "createddate": "2021-1-1",
-        "subcontent": "Docker là một nền tảng để cung cấp cách để building, deploying và running ứng dụng dễ dàng hơn bằng cách ",
-        "content": "Docker là một nền tảng để cung cấp cách để building, deploying và running ứng dụng dễ dàng hơn bằng cách sử dụng các containers (trên nền tảng ảo hóa). Ban đầu viết bằng Python, hiện tại đã chuyển sang Golang."
+        "createddate": "18-6-2021",
+        "subcontent": "Docker  là một công cụ được thiết kế để giúp tạo, triển khai và chạy các ứng ",
+        "content": "<p><em><strong>Docker là gì</strong></em></p><p>Docker  là một công cụ được thiết kế để giúp tạo, triển khai và chạy các ứng dụng dễ dàng hơn bằng cách sử dụng vùng chứa. Vùng chứa cho phép nhà phát triển đóng gói một ứng dụng với tất cả các phần nó cần, chẳng hạn như thư viện và các phần phụ thuộc khác, và triển khai nó dưới dạng một gói. Bằng cách làm như vậy, nhờ vùng chứa, nhà phát triển có thể yên tâm rằng ứng dụng sẽ chạy trên bất kỳ máy Linux nào khác bất kể bất kỳ cài đặt tùy chỉnh nào mà máy có thể có có thể khác với máy được sử dụng để viết và kiểm tra mã.</p><p><em><strong>Sử dụng Docker để làm gì?</strong></em></p>"
     }
 ]
