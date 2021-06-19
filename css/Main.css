@@ -810,3 +810,6 @@ svg.radial-progress circle {
   text-align: center;
   padding: 20px;
 }
+.table {
+  color: currentColor;
+}
