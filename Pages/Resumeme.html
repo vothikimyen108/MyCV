@@ -17,7 +17,15 @@
     <link rel="stylesheet" href="../css/Main.css">
     <link rel="stylesheet" href="../css/Responsive.css">
     <link rel="stylesheet" href="../css/Animate.css">
+    <link href='https://css.gg/check-o.css' rel='stylesheet'>
     <script async defer src="../js/static.js"></script>
+    <style>
+        .image svg {
+            width: 100%;
+            height: 100%;
+            fill:#FF719A;
+        }
+    </style>
 </head>
 
 <body>
@@ -113,139 +121,44 @@
                                 </ul>
                                 <h4>Coding <span class="title">skills</span></h4>
                                 <section>
-                                    <div class="skills">
-                                        <div class="skills-left">
-                                            <div class="row">
-                                                <div class="col-8">
-                                                    <svg class="radial-progress" data-percentage="20"
-                                                        viewBox="0 0 80 80">
-                                                        <circle class="incomplete" cx="40" cy="40" r="35"></circle>
-                                                        <circle class="complete" cx="40" cy="40" r="35"
-                                                            style="stroke-dashoffset: 39.58406743523136;"></circle>
-                                                        <text class="percentage" x="50%" y="57%"
-                                                            transform="matrix(0, 1, -1, 0, 80, 0)">20%</text>
-                                                    </svg>
-                                                </div>
-                                                <div class="col-2 code">
-                                                    <span>HTMl</span>
-                                                </div>
+                                    <div class="wrapper">
+                                        <div class="gallery">
+                                            <div class="image">
+                                               <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"><path d="M12.034,13.666c-0.094,0-0.189-0.026-0.274-0.082C11.647,13.51,9,11.744,9,9.5c0-2.381,1.709-3.63,3.217-4.733c1.225-0.896,2.283-1.67,2.283-2.868c0-0.665-0.419-0.994-0.424-0.998c-0.222-0.165-0.268-0.478-0.104-0.699s0.478-0.268,0.699-0.104c0.034,0.025,0.828,0.627,0.828,1.8c0,1.706-1.369,2.707-2.693,3.675C11.363,6.63,10,7.626,10,9.5c0,1.704,2.287,3.233,2.31,3.249c0.23,0.152,0.294,0.462,0.143,0.692C12.356,13.587,12.196,13.666,12.034,13.666z"/><path d="M14,13.5c-0.276,0-0.5-0.224-0.5-0.5c0-0.811-0.275-1.107-0.624-1.483C12.486,11.097,12,10.573,12,9.409c0-2.235,4.278-4.589,4.766-4.85c0.243-0.129,0.546-0.038,0.677,0.205s0.039,0.546-0.205,0.677C15.6,6.319,13,8.172,13,9.409c0,0.771,0.255,1.047,0.609,1.428C14.006,11.265,14.5,11.797,14.5,13C14.5,13.276,14.276,13.5,14,13.5z"/><path d="M9.044 16.021c-1.799 0-3.321-.208-3.998-.628C4.595 15.112 4.5 14.769 4.5 14.531c0-1.191 2.375-1.779 3.79-2.024.273-.046.531.136.578.407.047.272-.135.531-.407.578-1.42.246-2.833.754-2.965 1.066.551.727 7.976.752 11.361-.924.247-.123.547-.021.67.227.123.248.021.547-.227.67C15.306 15.518 11.841 16.021 9.044 16.021zM10.924 18.27c-3.212 0-3.62-1.279-3.67-1.556-.049-.271.131-.532.403-.581.262-.045.513.119.575.374.101.27.934.913 3.588.731 3.199-.218 3.762-.741 3.784-.763.125-.247.401-.307.646-.183.247.124.32.463.196.71-.18.356-1.012.991-4.558 1.233C11.542 18.259 11.221 18.27 10.924 18.27zM11.417 20.264c-2.155 0-3.578-.778-3.667-.828-.24-.135-.326-.438-.191-.679.133-.241.437-.328.68-.193.116.064 2.895 1.559 6.563-.022.254-.109.548.006.657.261.109.254-.007.548-.261.657C13.801 20.062 12.514 20.264 11.417 20.264z"/><path d="M7.846,22.304c-1.742,0-3.155-0.118-3.764-0.365C3.576,21.734,3.5,21.404,3.5,21.226c0-0.994,1.65-1.583,2.359-1.792c0.267-0.075,0.542,0.074,0.62,0.339c0.078,0.265-0.074,0.542-0.339,0.621c-0.604,0.177-1.228,0.473-1.503,0.694c2.043,0.625,12.955-0.098,14.251-1.433c0.192-0.198,0.509-0.203,0.707-0.011s0.203,0.509,0.011,0.707C18.4,21.594,12.128,22.304,7.846,22.304z"/><path d="M9.24 23.992c-1.885 0-3.386-.144-4.023-.368-.261-.091-.397-.376-.306-.637.092-.26.377-.399.637-.306 1.783.626 11.376.526 15.445-1.912.235-.142.543-.065.686.172.142.237.065.544-.172.686C18.568 23.388 13.1 23.992 9.24 23.992zM16.97 18.202c-.195 0-.38-.115-.461-.305-.107-.254.012-.548.266-.655.967-.409 3.726-1.881 3.726-3.233 0-.338-.12-.462-.209-.525-.479-.338-1.713-.06-2.234.127-.263.091-.546-.042-.64-.302-.093-.259.041-.545.3-.639.213-.078 2.114-.731 3.148-.005.29.204.635.602.635 1.344 0 2.258-3.893 3.967-4.336 4.154C17.1 18.189 17.034 18.202 16.97 18.202z"/></svg>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-8">
-                                                    <svg class="radial-progress" data-percentage="20"
-                                                        viewBox="0 0 80 80">
-                                                        <circle class="incomplete" cx="40" cy="40" r="35"></circle>
-                                                        <circle class="complete" cx="40" cy="40" r="35"
-                                                            style="stroke-dashoffset: 39.58406743523136;"></circle>
-                                                        <text class="percentage" x="50%" y="57%"
-                                                            transform="matrix(0, 1, -1, 0, 80, 0)">20</text>
-                                                    </svg>
-                                                </div>
-                                                <div class="col-2 code">
-                                                    <span>CSS</span>
-                                                </div>
+                                            <div class="image">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path d="M193.46 249.056a65.316 65.316 0 0 1 11.586-1.041l-3.122-.015h103.823c4.503 0 8.806-.617 12.908-1.754 19.37-5.363 33.345-22.537 33.345-43.663v-87.224c0-24.832-21.15-43.484-46.289-47.606-15.931-2.624-39.258-3.827-55.089-3.749-15.829.086-30.981 1.404-44.277 3.749C167.143 74.576 160 88.928 160 115.359V144h96v16H128.82c-35.628 0-64.538 42.571-64.813 95.242-.002.253-.007.505-.007.758 0 9.523.94 18.72 2.685 27.404C74.648 323.07 99.451 352 128.82 352H144v-45.935c0-26.827 20.146-51.733 49.46-57.009zm10.196-122.054c-9.592 0-17.384-7.785-17.384-17.403 0-9.664 7.774-17.52 17.384-17.52 9.574 0 17.399 7.855 17.399 17.52.001 9.618-7.809 17.403-17.399 17.403z"/><path d="M443.951 222.543C434.78 186.021 411.033 160 383.18 160H368v40.672c0 33.915-22.286 58.474-49.489 62.681a53.943 53.943 0 0 1-8.301.646H206.351a51.41 51.41 0 0 0-13.049 1.672C174.18 270.689 160 286.6 160 307.236v87.227c0 24.832 24.977 39.426 49.481 46.551 29.327 8.531 61.267 10.068 96.366 0C329.15 434.354 352 420.893 352 394.463V368h-96v-16h127.18c25.24 0 47.107-21.365 57.814-52.549C445.474 286.404 448 271.641 448 256c0-11.768-1.433-23.038-4.049-33.457zM307.867 382.82c9.59 0 17.381 7.785 17.381 17.4 0 9.65-7.791 17.521-17.381 17.521-9.577 0-17.399-7.871-17.399-17.521 0-9.63 7.806-17.4 17.399-17.4z"/></svg>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-8">
-                                                    <svg class="radial-progress" data-percentage="20"
-                                                        viewBox="0 0 80 80">
-                                                        <circle class="incomplete" cx="40" cy="40" r="35"></circle>
-                                                        <circle class="complete" cx="40" cy="40" r="35"
-                                                            style="stroke-dashoffset: 39.58406743523136;"></circle>
-                                                        <text class="percentage" x="50%" y="57%"
-                                                            transform="matrix(0, 1, -1, 0, 80, 0)">20%</text>
-                                                    </svg>
-                                                </div>
-                                                <div class="col-2 code">
-                                                    <span>Javascript</span>
-                                                </div>
+                                            <div class="image">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" data-name="Layer 1" viewBox="0 0 48 48"><path d="M42.91,10.92l-17-9.84a3.77,3.77,0,0,0-3.76,0l-17,9.84a3.75,3.75,0,0,0-1.87,3.25V33.83a3.75,3.75,0,0,0,1.87,3.25l17,9.84a3.77,3.77,0,0,0,3.76,0l17-9.84a3.75,3.75,0,0,0,1.87-3.25V14.17A3.75,3.75,0,0,0,42.91,10.92ZM23.7,37.15c-8.55,0-12.94-5.44-12.94-13s5-13.38,13.3-13.38c9.26,0,11.84,6.1,12,9H28.62c-.46-2.06-1.73-3.49-4.7-3.49-3.48,0-5.45,2.8-5.45,7.69,0,5.37,2.09,7.82,5.42,7.82a4.62,4.62,0,0,0,4.69-3.32h7.47C35.1,32.62,31.88,37.15,23.7,37.15Zm17.42-14h-1l-.3,1.23h.81v1.11H39.57l-.43,1.79h-1l.44-1.79H37.47L37,27.24H36l.44-1.79h-.78V24.34h1.06L37,23.11h-.85V22h1.12l.41-1.65h1L38.31,22h1.11l.4-1.65h1L40.41,22h.72Z"/><polygon points="37.74 24.34 38.84 24.34 39.14 23.11 38.04 23.11 37.74 24.34"/></svg>
                                             </div>
-                                        </div>
-                                        <div class="skills-right">
-                                            <div class="row">
-                                                <div class="col-8">
-                                                    <svg class="radial-progress" data-percentage="20"
-                                                        viewBox="0 0 80 80">
-                                                        <circle class="incomplete" cx="40" cy="40" r="35"></circle>
-                                                        <circle class="complete" cx="40" cy="40" r="35"
-                                                            style="stroke-dashoffset: 39.58406743523136;"></circle>
-                                                        <text class="percentage" x="50%" y="57%"
-                                                            transform="matrix(0, 1, -1, 0, 80, 0)">20%</text>
-                                                    </svg>
-                                                </div>
-                                                <div class="col-2 code">
-                                                    <span>C#</span>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-8">
-                                                    <svg class="radial-progress" data-percentage="20"
-                                                        viewBox="0 0 80 80">
-                                                        <circle class="incomplete" cx="40" cy="40" r="35"></circle>
-                                                        <circle class="complete" cx="40" cy="40" r="35"
-                                                            style="stroke-dashoffset: 39.58406743523136;"></circle>
-                                                        <text class="percentage" x="50%" y="57%"
-                                                            transform="matrix(0, 1, -1, 0, 80, 0)">20%</text>
-                                                    </svg>
-                                                </div>
-                                                <div class="col-2 code">
-                                                    <span>Java</span>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-8">
-                                                    <svg class="radial-progress" data-percentage="20"
-                                                        viewBox="0 0 80 80">
-                                                        <circle class="incomplete" cx="40" cy="40" r="35"></circle>
-                                                        <circle class="complete" cx="40" cy="40" r="35"
-                                                            style="stroke-dashoffset: 39.58406743523136;"></circle>
-                                                        <text class="percentage" x="50%" y="57%"
-                                                            transform="matrix(0, 1, -1, 0, 80, 0)">20%</text>
-                                                    </svg>
-                                                </div>
-                                                <div class="col-2 code">
-                                                    <span>Python</span>
-                                                </div>
-                                            </div>
+                                        <!-- </div> -->
+                                    <!-- </div>
+                                    <div class="wrapper">
+                                        <div class="gallery"> -->
+                                            <!-- css js html -->
+                                            <div class="image">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.37 5.164A.498.498 0 0020 5H4a.498.498 0 00-.498.547l1.5 16c.02.205.163.377.361.434l7 2a.492.492 0 00.295-.007l6-2a.5.5 0 00.34-.427l1.5-16a.503.503 0 00-.128-.383zM8.515 18.622l-.5-2a.5.5 0 01.97-.244l.36 1.44a.5.5 0 00.348.36l2.67.763a.51.51 0 00.274 0l2.58-.737a.502.502 0 00.36-.426l.358-3.223a.5.5 0 00-.497-.555H8a.5.5 0 010-1h7.661a.5.5 0 00.497-.445l.222-2a.5.5 0 00-.497-.555H7.5a.5.5 0 010-1H17a.502.502 0 01.497.556l-1 9a.497.497 0 01-.359.425l-3.501 1a.5.5 0 01-.274 0l-3.5-1a.5.5 0 01-.348-.359zM7 3h2a.5.5 0 000-1H7.5V1H9a.5.5 0 000-1H7a.5.5 0 00-.5.5v2A.5.5 0 007 3zM10.5 2.5a.5.5 0 00.5.5h2a.5.5 0 00.354-.854L12.207 1H13a.5.5 0 000-1h-2a.5.5 0 00-.354.854L11.793 2H11a.5.5 0 00-.5.5zM14.5 2.5a.5.5 0 00.5.5h2a.5.5 0 00.354-.854L16.207 1H17a.5.5 0 000-1h-2a.5.5 0 00-.354.854L15.793 2H15a.5.5 0 00-.5.5z"/></svg>
+                                             </div>
+                                             <div class="image">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M9.9,31.2,7.66,6H32.34L30.1,31.2,20,34ZM13.2,22l.43,4.86L20,28.63h0l6.33-1.75.85-9.49H16.58L17,12.56l3-.11h.56l3.16.11.29,3.27h3.1l-.59-6.61H14.24l-1,11.25H23.77l-.36,4L20,25.41h0l-3.44-.93L16.3,22Z"/></svg>
+                                             </div>
+                                             <div class="image">
+                                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"><path d="M20.387,21.203L22.25,0H1.751H1.75l1.863,21.203L11.973,24L20.387,21.203z M6.702,17.448l-0.32-4.061h2.546l0.187,2.041l2.856,0.777l2.866-0.777l0.32-3.333H6.248l-0.683-7.8h12.871l-0.235,2.555H8.391l0.219,2.647h9.374l-0.727,7.95l-5.226,1.447v0.016h-0.059L6.702,17.448z"/></svg>
+                                             </div>
                                         </div>
                                     </div>
                                 </section>
-                                <h4>Other<span class="title"> skills</span></h4>
-                                <div class="skills-bar">
-                                    <ul id="skills-bar">
-                                        <li>
-                                            JDBC
-                                            <div class="bar-container">
-                                                <span class="bar" data-bar='{ "color": "#FF719A", "delay": 600 }'>
-                                                    <span class="pct">22%</span>
-                                                </span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            Mysql, SQl Server
-                                            <div class="bar-container">
-                                                <span class="bar" data-bar='{ "color": "#FF719A", "delay": 600 }'>
-                                                    <span class="pct">22%</span>
-                                                </span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            Bootstrap
-                                            <div class="bar-container">
-                                                <span class="bar" data-bar='{ "color": "#FF719A", "delay": 1200 }'>
-                                                    <span class="pct">22%</span>
-                                                </span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            Flask, String MVC
-                                            <div class="bar-container">
-                                                <span class="bar" data-bar='{ "color": "#FF719A", "delay": 1800 }'>
-                                                    <span class="pct">22%</span>
-                                                </span>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                <h4>Other <span class="title">skills</span></h4>
+                                <div class="know">
+                                    <span>Mysql</span>
+                                    <span>Bootstrap</span>
+                                    <span>SQl Server</span>
+                                </div>
+                                <div class="know">
+                                    <span>String MVC</span>
+                                    <span>Flask, JDBC</span>
+                                    <span>Hibernate</span>
                                 </div>
                                 <h4>Knowledge</h4>
                                 <div class="know">
@@ -351,88 +264,4 @@
         </div>
     </div>
 </body>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
-    crossorigin="anonymous"></script>
-<script>
-    $(function () {
-
-       // xát lúc cuộn
-        $(window).scroll(function () {
-            $('svg.radial-progress').each(function (index, value) {
-                    //  lấy phần trăm 
-                    percent = $(value).data('percentage');
-                    // lấy bán kính hình tròn
-                    radius = $(this).find($('circle.complete')).attr('r');
-                    // lấy chu vi
-                    circumference = 2 * Math.PI * radius;
-                    // dựa vào phần trăm chu vi
-                    strokeDashOffset = circumference - ((percent * circumference) / 100);
-                    // Transition progress for 1 s
-                    $(this).find($('circle.complete')).animate({ 'stroke-dashoffset': strokeDashOffset }, 1000);
-                // }
-            });
-        }).trigger('scroll');
-
-    });
-
-    ; (function ($) {
-        "use strict";
-
-        var $bars = $(".bar"),
-            methods = {
-                init: function () {
-
-                    // Bind events
-                    methods.bindEvents();
-
-                },
-                bindEvents: function () {
-
-                    // Loop through each of the bars...
-                    $bars.each(function () {
-
-                        var $bar = $(this),
-                            $pct = $bar.find(".pct"),
-                            data = $bar.data("bar");
-
-                        setTimeout(function () {
-
-                            $bar
-                                .css("background-color", data.color)
-                                .animate({
-                                    "width": $pct.html()
-                                }, data.speed || 3000, function () {
-
-                                    $pct.css({
-                                        "color": data.color,
-                                        "opacity": 1
-                                    });
-
-                                });
-
-                        }, data.delay || 0);
-
-                    });
-
-                }
-            };
-
-        // Initialize on page load
-        methods.init();
-
-    })(jQuery);
-
-    // var _gaq = _gaq || [];
-    // _gaq.push(['_setAccount', 'UA-36251023-1']);
-    // _gaq.push(['_setDomainName', 'jqueryscript.net']);
-    // _gaq.push(['_trackPageview']);
-
-    // (function () {
-    //     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    //     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    //     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    // })();
-
-</script>
 </html>
