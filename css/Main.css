@@ -642,13 +642,12 @@ svg.radial-progress circle {
 .blog {
   transition: all .5s ease-in-out;
   display: flex;
-  padding: 20px;
+  
   margin-bottom: 20px;
   box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
   background-color: #fdfdfd;
   color: #555;
   height: 200px;
-  flex-direction: row;
 }
 
 .img {
@@ -658,6 +657,7 @@ svg.radial-progress circle {
 
 .info {
   width: 50%;
+  padding-top: 20px;
 }
 
 .img img {
