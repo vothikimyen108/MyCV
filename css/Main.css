@@ -819,3 +819,50 @@ svg.radial-progress circle {
 .table {
   color: currentColor;
 }
+/* css input  */
+#app-cover {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  padding:1rem;
+ }
+
+input {
+  outline: none;
+}
+input[type=search] {
+  box-sizing: content-box;
+  font-family: inherit;
+  font-size: 100%;
+}
+
+
+input[type=search] {
+  background: transparent url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 10px center;
+  padding: 9px 10px 9px 32px;
+  width: 30%;
+  background-color: #ffff;
+  height: 30px;
+  border-radius: 10em;
+  transition: all .5s;
+  border: none;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+}
+/* khi mà click vô input */
+input[type=search]:focus {
+  width: 100%;
+  background-color: #ffff;
+  border-color: #ef9a9a;
+
+}
+#note {
+ align-items: center;
+ margin: 0 auto;
+ width: 100px;
+ font-size: 20px;
+ text-transform: capitalize;
+ 
+}
+
+
+

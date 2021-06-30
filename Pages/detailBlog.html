@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./fontawesome-free-5.15.3-web/css/all.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -13,19 +14,21 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
         integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
         crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.2.0/css/bootstrap.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.1.0/styles/github.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.2.0/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.1.0/styles/github.min.css">
     <title>Vo Thi Kim Yen</title>
     <link rel="stylesheet" href="../css/Main.css">
     <link rel="stylesheet" href="../css/Responsive.css">
     <link rel="stylesheet" href="../css/Animate.css">
-    <script data-main="scripts/app" src="../js/blog.json"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script async defer src="../js/static.js"></script>
+
     <style>
         @media(max-width:800px) {
             .right {
                 padding: 1rem 2rem;
-               
+
             }
 
             .tieude h3 {
@@ -39,20 +42,22 @@
                 font-size: 10px;
             }
         }
+
         .hljs {
-  padding: 9.5px;
-}
-.hljs code {
-  white-space: pre;
-}
+            padding: 9.5px;
+        }
+
+        .hljs code {
+            white-space: pre;
+        }
     </style>
 </head>
 
 <body>
-    <div class="cv">
-        <div>
+    <div class="cv ">
+        <div style="margin: 0px auto;">
             <div class="row">
-                <div class="logo col-3 left">
+                <div class="logo col-3 left " id="result">
                     <div class="text-center">
                         <div class=" vv profile-circel-image-200">
                             <img src="../img/yen.jpg" class="img-fluid rounded-circle">
@@ -96,7 +101,7 @@
                         </svg>
                     </div>
                 </div>
-                <div class="right col-9 tilt-in-left-1">
+                <div class="right col-9 flip-in-diag-2-br">
                     <div class="hideleft" id="hideleft">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
                             class="bi bi-list" viewBox="0 0 16 16">
@@ -122,15 +127,16 @@
                             <div class="ball"></div>
                         </label>
                     </div>
-                    <div class="row">
-                        <div class="col tieude">
-                            <h3>My<span class="title"> Blog</span></h3>
+                    <div class="container-cover">
+                        <div class="row">
+                            <div class="col tieude">
+                                <h3>My<span class="title"> Blog</span></h3>
+                            </div>
+                        </div>
+                        <div class="row  p-3" id="detailblog">
+
                         </div>
                     </div>
-                    <div class="row  p-3" id="detailblog">
-                    
-                    </div>
-    
                 </div>
                 <div class="menu">
                     <ul>
@@ -178,9 +184,8 @@
             </div>
         </div>
     </div>
-    </div>
-
+    <script async defer src="../js/script.js"></script>
+    <script type="text/javascript" src="../js/detailBlog.js"></script>
 </body>
-<script src="https://d3js.org/d3.v5.min.js"></script>
-<script type="text/javascript" src="../js/detailBlog.js"></script>
+
 </html>
