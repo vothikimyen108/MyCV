@@ -7,9 +7,18 @@
         "createddate": "18-6-2021",
         "subcontent": "Đây là những từ tiếng anh thông dụng mà mình tìm hiểu được trong ngành IT",
         "content": "<p><strong>Một số từ vựng mình tìm hiểu được <code> còn cập nhật</code></strong></strong></p><table class='table table-bordered '><thead class='thead-dark'><tr><th>#</th><th>Từ vựng</th><th>Phiên âm</th><th>Nghĩa</th></tr></thead><tbody><tr><td>1</td><td>App (application)</td><td>æplɪ&#39;keɪʃn/</td><td>ứng dụng</td></tr><tr><td>2</td><td>Component</td><td>kəm&#39;pounənt</td><td>Bộ phận</td></tr><tr><td>3</td><td>Computer</td><td>kəm&#39;pju:tə</td><td>Máy tính</td></tr><tr><td>4</td><td>Database</td><td>deitə&#39;beis</td><td>Cơ sở dữ liệu</td></tr><tr><td>5</td><td>Hardware</td><td>´ha:d¸wɛə</td><td>Phần cứng</td></tr><tr><td>6</td><td>Internet</td><td>´intə,net</td><td>Internet</td></tr><tr><td>7</td><td>Network</td><td>&#39;netwə:k</td><td>Mạng lưới</td></tr><tr><td>8</td><td>Peripheral</td><td>pə´rifərəl</td><td>Ngoại vi</td></tr><tr><td>9</td><td>Software</td><td>ˈsôf(t)wer</td><td>Phần mềm</td></tr><tr><td>10</td><td>Abort</td><td>ə&#39;bɔ:t</td><td>Dừng lại, hủy bỏ</td></tr><tr><td>11</td><td>Bug</td><td>bʌg</td><td>Lỗi do trong quá trình lập trình gây ra</td></tr><tr><td>12</td><td>Closed source</td><td>klouzd sôrs</td><td>Mã nguồn đóng</td></tr><tr><td>13</td><td>Compatible</td><td>kәm’pætәbl</td><td>Tương thích</td></tr><tr><td>15</td><td>Crash</td><td>kræʃ</td><td>Ứng dụng đột ngột tự động tắt</td></tr><tr><td>16</td><td>End user</td><td>end ´ju:zə</td><td>người dùng cuối</td></tr><tr><td>17</td><td>Error</td><td>&#39;erər</td><td>Lỗi</td></tr><tr><td>18</td><td>Execute</td><td>&#39;eksikju:t</td><td>Thi hành</td></tr><tr><td>19</td><td>Feature</td><td>&#39;fi:tʃə</td><td>chức năng</td></tr><tr><td>20</td><td>IDE</td><td>IDE</td><td>Môi trường lập trình</td></tr><tr><td>20</td><td>Open source</td><td>ˈoʊpən sɔrs</td><td>Mã nguồn mở</td></tr><tr><td>21</td><td>Programmer</td><td>ˈproʊˌgræmər</td><td>Lập trình viên</td></tr><tr><td>21</td><td>Proprietary</td><td>prəˈpraɪəˌtɛri</td><td>Quyền sở hữu</td></tr><tr><td>22</td><td>Restriction</td><td>riˈstrɪkʃən</td><td>Sự hạn chế</td></tr><tr><td>23</td><td>Usability</td><td>ˌjuzəˈbɪlɪti</td><td>Khả năng, năng lực</td></tr></tbody></table>"
-         },
+    },
     {
         "id": "1",
+        "title": "Tìm hiểu use Effect-ReactJS",
+        "img": "../img/reactjs.png",
+        "author": "Kim Yến",
+        "createddate": "30-6-2021",
+        "subcontent": "Side effects là các hiệu ứng phụ tác động và làm biến đổi trạng thái state ",
+        "content": "<div w3-include-html='./blog/reactjseffect.html'>aa</div>"
+    },
+    {
+        "id": "2",
         "title": "Tìm hiểu Docker",
         "img": "../img/blog2.jpg",
         "author": "Kim Yến",

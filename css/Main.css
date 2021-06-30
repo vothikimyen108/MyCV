@@ -633,12 +633,12 @@ svg.radial-progress circle {
 /* blog */
 
 .info span {
-  padding: 10px;
-  margin-right: 30px;
+
 }
 
 .info svg {
-  fill: #FF719A;
+  fill: #FF719A;  
+  margin: 0px 5px;
 }
 
 .info h6 {
@@ -788,20 +788,25 @@ svg.radial-progress circle {
   margin-bottom: 10px;
 }
 
+.info-d {
+  width: 100%;
+} 
 .info-d p {
   text-align: justify;
 }
 
-.info-d span {
-  padding: 10px;
-  margin-right: 30px;
+.info-d nav {
+  display: flex;
+  justify-content: center;
+ 
 }
 
 .info-d svg {
-  fill: #FF719A;
+  fill: #FF719A; 
+  margin:0px 10px;
 }
 
-.info-d h4 {
+#title-blog {
   text-transform: capitalize;
   font-weight: bold;
   color: #FF719A;
@@ -809,10 +814,7 @@ svg.radial-progress circle {
   text-align: center;
 }
 
-.info-d nav {
-  text-align: center;
-  padding: 20px;
-}
+
 
 .table {
   color: currentColor;

@@ -257,10 +257,7 @@
   .info {
     padding: 10px;
   }
-  .info span {
-    padding: 10px;
-    margin-right: 1px;
-  }
+
   .info p {
     white-space: nowrap;
     width: 400px;
@@ -306,9 +303,7 @@
   .Toggle {
     right: 24%;
   }
-  .info-d nav {
-    padding: 0px;
-  }
+
 }
 
 @media(max-width:380px) {

@@ -1,0 +1,93 @@
+<h4>Side effect là gì?</h4>
+<ul>
+    <li>
+        <p>Side effects là các hiệu ứng phụ tác động và làm biến đổi trạng thái state bên ngoài chương trình. Đây là
+            thuật ngữ chuyên ngành được sử dụng trong lĩnh vực lập trình phần mềm</p>
+        <p>ví dụ: Khi bạn thao tác nhập dữ liệu username, password và ấn submit trên một hàm submit Login, phần mềm sẽ
+            lần lượt xử lý… gọi api lấy dữ liệu, getTimeOout, getInterval</p>
+        <p>chia làm 2 loại:</p>
+        <ul>
+            <li>effect không cần clean up: gọi api, thương tác với DOM</li>
+            <li>effect cần clean up: subscriptions, setTimeout, setInterval</li>
+        </ul>
+    </li>
+</ul>
+<h4>Hook UseEffect là gì?</h4>
+<p>useEffect để quản lý vòng đời của của một component và nó phục vụ chúng ta sử dụng trong function component thay vì
+    các lifecycle như trước đây trong class component.</p>
+<ul>
+    <li>được thực thi sau mỗi lần render</li>
+    <li>được thực thi ít nhất một lần sau lần render đầu tiên</li>
+    <li>những lần render sau được thực thi nếu dependencies thay đổi</li>
+    <li>effect clean up được thực thi trước run effect lần tiếp theo hoạc unmount</li>
+</ul>
+<p>cú pháp</p>
+<pre class="hljs language-js"><code><span class="hljs-keyword">import</span> React, { useEffect } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react&#x27;</span>;
+funtion <span class="hljs-function"><span class="hljs-title">useEffect</span>(<span class="hljs-params">callback, dependencies</span>)</span> {
+ <span class="hljs-comment">//callback: side effect cần dùng</span>
+ <span class="hljs-comment">//dependencies: hàn gọi lại nếu dependencies thay đổi</span>
+}
+</code></pre>
+<h5>code thực tế sử dụng useEffect</h5>
+<pre class="hljs language-js"><code><span class="hljs-keyword">import</span> React, { useState, useEffect } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react&quot;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Example</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">//khai báo color sử dụng state</span>
+  <span class="hljs-comment">//chạy trước khi render</span>
+  <span class="hljs-keyword">const</span> [color, setColor] = useState(<span class="hljs-string">&quot;dark&quot;</span>);
+  <span class="hljs-comment">//chạy sau khi render</span>
+  useEffect(<span class="hljs-function">() =&gt;</span> {
+    <span class="hljs-comment">//nói làm side effect</span>
+    <span class="hljs-keyword">return</span> {
+      <span class="hljs-comment">//clean up ở đây</span>
+      <span class="hljs-comment">//chạy trước lần render tiếp theo or unmount</span>
+    };
+  },[]);
+  <span class="hljs-comment">//redering </span>
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello yen!!!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>;
+}
+</code></pre>
+<pre><code>// xem cách nó hoạt động nhé
+Mounting
+Rendering
+run useEffect()
+Updating
+Rendering
+run useEffect() clean up nếu dependencies thay đổi
+run useEffect() nếu dependencies thay đổi
+Unmounting
+run useEffect() clean up nếu dependencies thay đổi
+</code></pre>
+<h4>Dùng useEffect với điều kiện.</h4>
+<p>1. Không khai báo dependencies</p>
+<p>ý nghĩa nó luôn luôn được thực hiện sau mỗi lần render ví dụ:</p>
+<pre class="hljs language-js"><code>  <span class="hljs-comment">//chạy sau khi render</span>
+  useEffect(<span class="hljs-function">() =&gt;</span> {
+    <span class="hljs-comment">//nói làm side effect</span>
+    <span class="hljs-keyword">return</span> {
+      <span class="hljs-comment">//clean up ở đây</span>
+      <span class="hljs-comment">//chạy trước lần render tiếp theo or unmount</span>
+    };
+  });
+</code></pre>
+<p>2. Để mảng rỗng</p>
+<p>ý nghĩa chạy đúng 1 lần, ví dụ:</p>
+<pre class="hljs language-js"><code>  <span class="hljs-comment">//chạy sau khi render</span>
+  useEffect(<span class="hljs-function">() =&gt;</span> {
+    <span class="hljs-comment">//nói làm side effect</span>
+    <span class="hljs-keyword">return</span> {
+      <span class="hljs-comment">//clean up ở đây</span>
+      <span class="hljs-comment">//chạy trước lần render tiếp theo or unmount</span>
+    };
+  },[]);
+</code></pre>
+<p>3. Có dependencies</p>
+<p>ý nghĩa chạy 1 lần sau lần render đầu, chạy tiếp nếu dependencies thay đổi</p>
+<pre class="hljs language-js"><code>  <span class="hljs-comment">//chạy sau khi render</span>
+  useEffect(<span class="hljs-function">() =&gt;</span> {
+    <span class="hljs-comment">//nói làm side effect</span>
+    <span class="hljs-keyword">return</span> {
+      <span class="hljs-comment">//clean up ở đây</span>
+      <span class="hljs-comment">//chạy trước lần render tiếp theo or unmount</span>
+    };
+  },[filter]);
+</code></pre>
