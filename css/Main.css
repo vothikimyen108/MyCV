@@ -663,11 +663,12 @@ svg.radial-progress circle {
 .img img {
   width: 100%;
   height: 100%;
+  /* padding: px; */
   object-fit: contain;
 }
 
 .img img:hover {
-  transform: scale(1.02);
+  transform: scale(1.01);
 }
 
 
