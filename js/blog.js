@@ -74,25 +74,23 @@ function find(e) {
   });
   console.log(filteredData);
   cleanBlogList();
-if (filteredData.length > 0) {
+  if (filteredData.length > 0) {
     document.getElementById("note").style.display = "none";
     for (item in data) {
-      for (itemFilter in filteredData)  {
-        if  (data[item].id == filteredData[itemFilter].id){
-             console.log(data[item].id)
-             document.getElementsByClassName("blog")[item].style.display = "block";
+      for (itemFilter in filteredData) {
+        if (data[item].id == filteredData[itemFilter].id) {
+          console.log(data[item].id);
+          document.getElementsByClassName("blog")[item].style.display = "flex";
         }
-           
       }
     }
-  }
-  else {
+  } else {
     document.getElementById("note").style.display = "block";
-    document.getElementById("note").innerHTML ="not found";
+    document.getElementById("note").innerHTML = "not found";
   }
 }
- function cleanBlogList (){
-    for (item in data) {
-        document.getElementsByClassName("blog")[item].style.display = "none";
-      }
- }
+function cleanBlogList() {
+  for (item in data) {
+    document.getElementsByClassName("blog")[item].style.display = "none";
+  }
+}

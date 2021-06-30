@@ -632,9 +632,44 @@ svg.radial-progress circle {
 */
 /* blog */
 
-.info span {
 
+
+.list-blog {
+  width: 100%;
+  margin: 0 auto;
 }
+
+.blog {
+  transition: all .5s ease-in-out;
+  display: flex;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+  background-color: #fdfdfd;
+  color: #555;
+  height: 200px;
+  flex-direction: row;
+}
+
+.img {
+  width: 50%;
+  margin-right: 20px;
+}
+
+.info {
+  width: 50%;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.img img:hover {
+  transform: scale(1.02);
+}
+
 
 .info svg {
   fill: #FF719A;  
@@ -669,46 +704,11 @@ svg.radial-progress circle {
 .info a:hover svg {
   opacity: 1;
 }
-
-.list-blog {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.blog {
-  transition: all .5s ease-in-out;
-  display: flex;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
-  background-color: #fdfdfd;
-  color: #555;
-  height: 200px;
-}
-
-.img {
-  width: 50%;
-  margin-right: 20px;
-}
-
-.info {
-  width: 50%;
-}
-
-.img img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.img img:hover {
-  transform: scale(1.02);
-}
-
 .blog:hover {
   transform: scale(1.01);
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
+
 
 .center {
   position: absolute;
