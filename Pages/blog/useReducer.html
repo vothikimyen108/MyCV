@@ -1,0 +1,84 @@
+<p>
+  useReducer như là một phiên bản nâng cấp hơn của useState, dùng để quản lý
+  những state của giao diện, thay vì dùng nhiều useState sử lý phức tạp thì dùng
+  useReducer đơn giản và logic hơn.
+</p>
+<p>cú pháp:</p>
+<pre
+  class="hljs language-js"
+><code><span class="hljs-keyword">const</span> [state, dispatch] = useReducer(reducer, initialArg, init);
+</code></pre>
+<p>
+  <strong>state</strong>: Ảnh chụp nhanh trạng thái được sử dụng trong chu kỳ
+  kết xuất / đánh giá lại thành phần. (là cái trạng thái cần dùng)
+</p>
+<p>
+  <strong>dispatch</strong>: Một chức năng có thể được sử dụng để gửi một hành
+  động mới (tức là kích hoạt cập nhật trạng thái).
+</p>
+<p>
+  <strong>reducer</strong>: (presate, action) =&gt; newState Một chức năng được
+  kích hoạt tự động sau khi một hành động được gửi đi (qua sendFn ()) - nó nhận
+  được ảnh chụp nhanh trạng thái mới nhất và sẽ trả về trạng thái mới, được cập
+  nhật.
+</p>
+<p><strong>initialState</strong>: Trạng thái ban đầu.</p>
+<p>
+  <strong>initFn</strong>: Một chức năng để thiết lập trạng thái ban đầu theo
+  chương trình
+</p>
+<p>Ví dụ:</p>
+<pre
+  class="hljs language-js"
+><code><span class="hljs-comment">//tạo giá trị đàu của state</span>
+<span class="hljs-keyword">const</span> initialState = {<span class="hljs-attr">count</span>: <span class="hljs-number">0</span>};
+<span class="hljs-comment">//hàm thay đổi state</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reducer</span>(<span class="hljs-params">state, action</span>) </span>{
+<span class="hljs-comment">//nếu nhận increment thì count thay đổi khác...</span>
+  <span class="hljs-keyword">switch</span> (action.type) {
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;increment&#x27;</span>:
+      <span class="hljs-keyword">return</span> {<span class="hljs-attr">count</span>: state.count + <span class="hljs-number">1</span>};
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;decrement&#x27;</span>:
+      <span class="hljs-keyword">return</span> {<span class="hljs-attr">count</span>: state.count - <span class="hljs-number">1</span>};
+    <span class="hljs-keyword">default</span>:
+      <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>();
+  }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Counter</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> [state, dispatch] = useReducer(reducer, initialState);
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+     Count: {state.count}//gọi ra giá trị state
+    //   gọi dispatch() thay đổi type
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> dispatch({type: &#x27;decrement&#x27;})}&gt;-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> dispatch({type: &#x27;increment&#x27;})}&gt;+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/&gt;</span></span>
+  );
+}
+</code></pre>
+<h4>So sánh useState và useReducer?</h4>
+<table  class="table">
+  <thead>
+    <tr>
+      <th>useState</th>
+      <th style="text-align: center">useReducer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>là công cụ quảng lý state chính</td>
+      <td style="text-align: center">
+        dùng nó nếu bạn quản lý nhiều state chung
+      </td>
+    </tr>
+    <tr>
+      <td>Dễ sử dụng/ dữ liệu độc lập</td>
+      <td style="text-align: center">liên quan nhiều data cú pháp khó hơn</td>
+    </tr>
+    <tr>
+      <td>cập nhật được ít</td>
+      <td style="text-align: center">tốt khi dùng cập nhật trạng thái</td>
+    </tr>
+  </tbody>
+</table>

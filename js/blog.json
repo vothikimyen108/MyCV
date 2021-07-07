@@ -40,11 +40,29 @@
     ,
     {
         "id": "4",
-        "title": "Tìm hiểu useEffect Reactjs",
+        "title": "UseReducer là gì?",
+        "img": "../img/usereducer.png",
+        "author": "Kim Yến",
+        "createddate": "7-7-2021",
+        "subcontent": "UseReducer trong bài này mình tổng hợp tài liệu về nó ",
+        "content": "<div w3-include-html='./blog/useReducer.html'></div>"
+    } ,
+    {
+        "id": "5",
+        "title": "React hoạt động như thế nào?",
         "img": "../img/reactlogo.png",
         "author": "Kim Yến",
         "createddate": "7-7-2021",
-        "subcontent": "trong bài này mình tổng hợp tài liệu về cách dùng uesEffect",
-        "content": "<div w3-include-html='./blog/useEffect.html'></div>"
+        "subcontent": "trong bài này mình tổng hợp tài liệu về react",
+        "content": "<div w3-include-html='./blog/react.html'></div>"
+    },
+    {
+        "id": "6",
+        "title": "React.PureComponent và React.memo",
+        "img": "../img/reactlogo.png",
+        "author": "Kim Yến",
+        "createddate": "7-7-2021",
+        "subcontent": "React.PureComponent và React.memo là gì",
+        "content": "<div w3-include-html='./blog/Reactmemo.html'></div>"
     }
 ]

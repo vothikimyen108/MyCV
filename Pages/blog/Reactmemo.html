@@ -1,0 +1,55 @@
+<h3>Cách thức re-render giữa các component cha con trong React?</h3>
+<p>Component cha re-render là toàn bộ con cháu, chút, chít re-render theo.
+khái niệm <strong>re-render</strong> và <strong>re-paint</strong> khi làm việc với ReactJS.</p>
+<p>Giữa các lần update (re-rendering) này, React sẽ lấy kết quả render của chúng (là các thẻ jsx nằm trong hàm method  <strong>render</strong>- ứng với React Class Component, hay các tag jsx được đặt trong câu lệnh  <strong>return</strong>  - ứng với React Functional Component để so sánh (React gọi nó là cơ chế  <strong>diffing</strong>).</p>
+<p>Nếu kết quả so sánh này có sự khác biệt, React sẽ  <strong>thực sự</strong>  change cây DOM thật (cái này gọi là re-painting). Nhìn chung, thứ ảnh hưởng đến hiệu suất của một trang web nhiều nhất chính là quá trình  <strong>re-painting</strong>  (vẽ lại) này</p>
+<h3>vì sao PureComponent và memo ra đời ?</h3>
+<p>PureComponent sẽ tự động xử lý thêm một bước <strong>so sánh nông (shallow comparison)</strong> bên trong life cycle <strong>shouldComponentUpdate</strong> để đảm bảo component chỉ được re-render khi các props hay state có sự thay đổi, từ đó cải thiện performance (hiệu suất).
+<strong>PureComponent</strong> dùng cho các <strong>React Class Component</strong>, còn <strong>React Functional Component</strong> thì dùng… <strong>memo</strong>
+Tóm lại: để tránh việc render nhiều, tăng hiệu suất.</p>
+<pre class="hljs language-jsx"><code><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">PostContent</span>(<span class="hljs-params">props</span>) </span>{
+  <span class="hljs-comment">/* render using props */</span>
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">areEqual</span>(<span class="hljs-params">prevProps, nextProps</span>) </span>{
+  <span class="hljs-comment">/*
+  trả ra true nếu nextprops và prevProps bằng nhau, 
+  ngược lại trả ra false.
+  */</span>
+  <span class="hljs-keyword">if</span> (prevProps.postContent === nextProps.postContent) {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+  }
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> React.memo(PostContent, areEqual);
+</code></pre>
+<h3>So sánh nông là gì ?</h3>
+<pre class="hljs language-js"><code><span class="hljs-keyword">const</span> nestedObjectA = {
+  <span class="hljs-attr">author</span>: {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Thien Bui&#x27;</span>,
+    <span class="hljs-attr">country</span>: <span class="hljs-string">&#x27;Viet Nam&#x27;</span>,
+  },
+};
+
+<span class="hljs-keyword">const</span> nestedObjectB = {
+  <span class="hljs-attr">author</span>: {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Thien Bui&#x27;</span>,
+    <span class="hljs-attr">country</span>: <span class="hljs-string">&#x27;Viet Nam&#x27;</span>,
+  },
+};
+
+</code></pre>
+<p>Thì khi so sánh</p>
+<pre class="hljs language-js"><code><span class="hljs-built_in">console</span>.log(nestedObjectA === nestedObjectB);
+
+</code></pre>
+<p>Sẽ cho ra kết quả là  <strong>false</strong>. Lý do thì như ta đã biết vì hai biến  nestedObjectA  và  nestedObjectB  đang trỏ đến hai  <strong>địa chỉ vùng nhớ</strong>  khác nhau. Và đây cũng chính là  <strong>so sánh nông</strong>.</p>
+<p>Vì sao ư? Vì phép so sánh trên chỉ mới dừng lại ở  <strong>bề mặt</strong>, ở mức  <strong>nông</strong>, khi mà chỉ vừa nhìn thấy 2 con số chứa 2 địa chỉ vùng nhớ khác nhau là phép toán sẽ return ra  <strong>false</strong>  ngay.
+<strong>so sánh sâu</strong>  -  <strong>deep comparison</strong>.</p>
+<p>Nếu phép so sánh vừa rồi mà thực hiện  <strong>so sánh sâu</strong>  thì js sẽ đi so sánh đi sâu vào tận các property trong cùng.</p>
+<pre class="hljs language-js"><code>nestedObjectA.author.name === nestedObjectB.author.name;
+<span class="hljs-comment">//true. Vì cả 2 property name này đều đang là kiểu primitve, đều đang chứa giá trị &#x27;Thien Bui&#x27;</span>
+nestedObjectA.author.country === nestedObjectB.author.country;
+<span class="hljs-comment">//true. Vì cả 2 property name này đều đang là kiểu primitve, đều đang chứa giá trị &#x27;Viet Nam&#x27;</span>
+</code></pre>
+<p>Tài liệu tham khảo tại:
+<a href="https://kysumattien.com/react-purre-component-and-react-memo">https://kysumattien.com/react-purre-component-and-react-memo</a></p>
