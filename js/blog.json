@@ -16,24 +16,35 @@
         "createddate": "30-6-2021",
         "subcontent": "Side effects là các hiệu ứng phụ tác động và làm biến đổi trạng thái state ",
         "content": "<div w3-include-html='./blog/reactjseffect.html'>aa</div>"
-    },
+    }
+    ,
     {
         "id": "2",
-        "title": "Tìm hiểu Docker",
-        "img": "../img/blog2.jpg",
+        "title": "Tìm hiểu Context reactjs",
+        "img": "../img/reactjscontext.png",
         "author": "Kim Yến",
-        "createddate": "18-6-2021",
-        "subcontent": "Docker  là một công cụ được thiết kế để giúp tạo, triển khai và chạy các ứng ",
-        "content": "<p><em><strong>Docker là gì</strong></em></p><p>Docker  là một công cụ được thiết kế để giúp tạo, triển khai và chạy các ứng dụng dễ dàng hơn bằng cách sử dụng vùng chứa. Vùng chứa cho phép nhà phát triển đóng gói một ứng dụng với tất cả các phần nó cần, chẳng hạn như thư viện và các phần phụ thuộc khác, và triển khai nó dưới dạng một gói. Bằng cách làm như vậy, nhờ vùng chứa, nhà phát triển có thể yên tâm rằng ứng dụng sẽ chạy trên bất kỳ máy Linux nào khác bất kể bất kỳ cài đặt tùy chỉnh nào mà máy có thể có có thể khác với máy được sử dụng để viết và kiểm tra mã.</p><p><em><strong>Sử dụng Docker để làm gì?</strong></em></p>"
+        "createddate": "2-7-2021",
+        "subcontent": "dùng để truyền dữ liệu giữa các thành phần (component)",
+        "content": "<div w3-include-html='./blog/contextreact.html'></div>"
     }
     ,
     {
         "id": "3",
-        "title": "Tìm hiểu Context reactjs",
-        "img": "../img/reactjscontext.png",
+        "title": "Tìm hiểu Conponent trong Reactjs",
+        "img": "../img/reactlogo.png",
         "author": "Kim Yến",
-        "createddate": "7-2-2021",
-        "subcontent": "dùng để truyền dữ liệu giữa các thành phần (component)",
-        "content": "<div w3-include-html='./blog/contextreact.html'>aa</div>"
+        "createddate": "7-7-2021",
+        "subcontent": "trong bài này mình tổng hợp tài liệu về component",
+        "content": "<div w3-include-html='./blog/conponent.html'></div>"
+    }
+    ,
+    {
+        "id": "4",
+        "title": "Tìm hiểu useEffect Reactjs",
+        "img": "../img/reactlogo.png",
+        "author": "Kim Yến",
+        "createddate": "7-7-2021",
+        "subcontent": "trong bài này mình tổng hợp tài liệu về cách dùng uesEffect",
+        "content": "<div w3-include-html='./blog/useEffect.html'></div>"
     }
 ]

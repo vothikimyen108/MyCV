@@ -1,0 +1,150 @@
+<h3>Tìm  Hiểu về Functional và Class Components.</h3>
+<h4>1  React Component là gì?</h4>
+<p>“<strong>component là một block code độc lập, có thể tái sử dụng, nó chia UI thành nhiều phần nhỏ. Mặt khác, có thể nghĩ đơn giản các components như một khối các blocks LEGO. Tương tự, cấu trúc LEGO đ&quot;ược tạo từ nhiều blocks LEGO nhỏ, như tạo một web page hoặc UI từ nhiều block code(components).</strong>”
+Việc chia source code thành các components giúp ta rất nhiều. Mỗi component có code JS và CSS riêng, chúng có thể tái sử dụng, dễ đọc, dễ viết, dễ test.
+Có hai loại là Funtional và Class Components.</p>
+<h3>2 Funtional Components</h3>
+<p><strong>functional component là một hàm Javascript (hoặc ES6) trả về 1 phần tử/1 element React. (JSX), nhận props làm đối số nếu cần</strong></p>
+<p>Ví dụ</p>
+<pre class="hljs language-js"><code><span class="hljs-keyword">const</span> Example = <span class="hljs-function">() =&gt;</span> { 
+	<span class="hljs-keyword">return</span> ( <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>I&#x27;m a functional component!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span> ); };
+};
+</code></pre>
+<p>Lưu ý  <strong>Functional components cũng được nói với một cái tên là stateless components</strong>  bởi vì chúng ta không thể làm nhiều thứ phức tạp như quản lý React State (data) hoặc phương thức life-cycle trong functional components.</p>
+<p>Tuy nhiên, React giới thiệu React Hooks trong versions 16.8, giờ nó cho phép chúng ta sử dụng state và những features khác trong functional components.</p>
+<h3>3 Class (Stateful) Components</h3>
+<p><strong>Các Class components là những class ES6.</strong> Chúng phức tạp hơn functional components ở chỗ nó còn có: phương thức khởi tạo, life-cycle, hàm render() và quản lý state (data)</p>
+<pre class="hljs language-js"><code><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react&#x27;</span> 
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserLogin</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{ 
+   <span class="hljs-function"><span class="hljs-title">render</span>(<span class="hljs-params"></span>)</span> { <span class="hljs-keyword">return</span> (
+   	<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello Yen<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
+   	) 
+   }
+}; 
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> UserLogin
+</code></pre>
+<p>React class component là:</p>
+<ul>
+<li>là một class ES6, nó sẽ là một component khi nó “kế thừa” React  <strong>component</strong>.</li>
+<li>có thể nhận  <strong>props</strong>  (trong hàm khởi tạo) nếu cần.</li>
+<li>có thể maintain data của nó với  <strong>state</strong></li>
+<li>phải có 1 method  <strong>render()</strong>  trả về 1 React element (JSX), or null.</li>
+</ul>
+<p>Tham khảo từ: <a href="https://viblo.asia/p/react-js-hieu-ve-functional-va-class-components-Qbq5QpkRlD8">https://viblo.asia/p/react-js-hieu-ve-functional-va-class-components-Qbq5QpkRlD8</a></p>
+<h3>Class-based Component Lifecycle</h3>
+<p><img src="https://i.ibb.co/2hJ882f/vongdoi.png" alt="Minion"></p>
+<p>Vòng đời của componen gồm 3 giai đoạn:
+<strong>componentDidMount()</strong> : lúc mới tạo ra, add và trong Dom
+<strong>componentDidUpdate()</strong>: Có thay đổi <strong>componentWillUnmount()</strong>: Bị hủy nkhỏi khỏi Dom.</p>
+<p>Mỗi giai đoạn có các event cần thực hiện</p>
+<p><img src="https://i1.wp.com/programmingwithmosh.com/wp-content/uploads/2018/10/Screen-Shot-2018-10-31-at-1.44.28-PM.png?resize=1024%2C567&amp;ssl=1" alt="Minion"></p>
+<h3>Mounting (Diễn ra đúng 1 lần)</h3>
+<p>Thực hiện các sự kiện gọi hàm các hàm sau:</p>
+<ul>
+<li><a href="https://reactjs.org/docs/react-component.html#constructor"><strong><code>constructor()</code></strong></a></li>
+<li><a href="https://reactjs.org/docs/react-component.html#static-getderivedstatefromprops"><code>static getDerivedStateFromProps()</code></a></li>
+<li><a href="https://reactjs.org/docs/react-component.html#render"><strong><code>render()</code></strong></a>
+Sau khi chạy hết có gọi <a href="https://reactjs.org/docs/react-component.html#componentdidmount"><strong><code>componentDidMount()</code></strong></a></li>
+</ul>
+<h3>Updating (thực được nhiều lần)</h3>
+<p>Quá trình này nó chạy qua  <a href="https://reactjs.org/docs/react-component.html#static-getderivedstatefromprops"><code>static getDerivedStateFromProps()</code></a>
+Xuống -   <a href="https://reactjs.org/docs/react-component.html#shouldcomponentupdate"><code>shouldComponentUpdate()</code></a>,  rồi <a href="https://reactjs.org/docs/react-component.html#render"><strong><code>render()</code></strong></a>,  uppdate Dom <a href="https://reactjs.org/docs/react-component.html#getsnapshotbeforeupdate"><code>getSnapshotBeforeUpdate()</code></a>, cuối cùng là -   <a href="https://reactjs.org/docs/react-component.html#componentdidupdate"><strong><code>componentDidUpdate()</code></strong></a></p>
+<h3>Unmounting</h3>
+<p>nó sẽ là components  <a href="https://reactjs.org/docs/react-component.html#componentwillunmount"><strong><code>componentWillUnmount()</code></strong></a></p>
+<p><em>Lưu ý</em></p>
+<blockquote>
+<p>Sơ đồ trên phức tạp chỉ cần sử dụng cho những các chuyên sâu, nhiều khi không cần dùng dưới đây là sơ đồ đc rút gọn thường được dùng nhiều hơn, hạn chế dùng didupdate tạo ra vòng lặp vô tận.</p>
+</blockquote>
+<p><img src="https://i.ibb.co/gZZ6V7R/vongdoi1.png" alt="Minion"></p>
+<h3>Tìm hiểu các khái niệm cơ bản, khi nào dùng chúng.</h3>
+<ol>
+<li>Constructor()
+cú pháp:</li>
+</ol>
+<pre class="hljs language-js"><code><span class="hljs-title">constructor</span>(<span class="hljs-params">props</span>)
+</code></pre>
+<ul>
+<li>sử dụng thoải mái</li>
+<li>được dùng định các state</li>
+<li>định nghĩa props (properties) của component</li>
+<li>nhớ super()</li>
+</ul>
+<pre class="hljs language-js"><code><span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">props</span>)</span> {
+  <span class="hljs-built_in">super</span>(props);
+  <span class="hljs-comment">// Don&#x27;t call this.setState() here! </span>
+  <span class="hljs-built_in">this</span>.state = { <span class="hljs-attr">counter</span>: <span class="hljs-number">0</span> };
+  <span class="hljs-built_in">this</span>.handleClick = <span class="hljs-built_in">this</span>.handleClick.bind(<span class="hljs-built_in">this</span>);
+}
+</code></pre>
+<h3>componentDidMount()</h3>
+<ul>
+<li>được dùng để khởi tạo dữ liệu cho component, gọi api, biến đổ dữ liệu cập nhật state</li>
+<li>Gửi tracking baseview
+ví dụ:</li>
+</ul>
+<pre class="hljs language-js"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HomePage</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">PureComponent</span> </span>{
+   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">props</span>)</span> {
+   	<span class="hljs-built_in">super</span>(props);
+   	<span class="hljs-built_in">this</span>.state = {
+   		<span class="hljs-attr">loading</span>: <span class="hljs-literal">true</span>,
+   		<span class="hljs-attr">productList</span>: [],
+   	};
+   }
+   <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-title">componentDidMount</span>(<span class="hljs-params"></span>)</span> {
+   	<span class="hljs-keyword">try</span> {
+   		<span class="hljs-comment">// Send GA page view tracking</span>
+   		analytics.page(<span class="hljs-string">&#x27;Home page&#x27;</span>);
+   		<span class="hljs-keyword">const</span> productList = <span class="hljs-keyword">await</span> productApi.getAll();
+   		<span class="hljs-built_in">this</span>.setState({
+   		productList,
+   		<span class="hljs-attr">loading</span>: <span class="hljs-literal">false</span>,
+   	});
+   	} <span class="hljs-keyword">catch</span> (error) {
+   		<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;Failed to fetch product list: &#x27;</span>, error);
+   		<span class="hljs-built_in">this</span>.setState({<span class="hljs-attr">loading</span>: <span class="hljs-literal">false</span>});
+   		}
+   	}
+   <span class="hljs-function"><span class="hljs-title">render</span>(<span class="hljs-params"></span>)</span> {
+   	<span class="hljs-keyword">const</span> { loading, productList} = <span class="hljs-built_in">this</span>.state;
+   	<span class="hljs-keyword">if</span> (loading) <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Loader</span> /&gt;</span></span>;
+   	<span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ProductList</span> <span class="hljs-attr">productList</span>=<span class="hljs-string">{productList}</span>&gt;</span>
+   	}
+   }
+}
+</span></code></pre>
+<h3>componentDidUpdate()</h3>
+<p>Hạn chế dùng, chỉ dùng khi nâng cao</p>
+<h3>componentWillUnmount()</h3>
+<p>được gọi khi một thành phần được ngắt kết nối và hủy,
+Cleartimeout hoặc interval nếu có dùng.
+Reset dữ liệu trên redux nếu cần thiết.</p>
+<pre class="hljs language-js"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Home</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">PureComponent</span> </span>{
+	<span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">props</span>)</span> {
+		<span class="hljs-built_in">super</span>(props);
+		<span class="hljs-built_in">this</span>.isComponentMounted = <span class="hljs-literal">false</span>;
+		<span class="hljs-built_in">this</span>.state = {
+		<span class="hljs-attr">productList</span>: [],
+	}
+	}
+	<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-title">componentDidMount</span>(<span class="hljs-params"></span>)</span> {
+		<span class="hljs-built_in">this</span>.isComponentMounted = <span class="hljs-literal">true</span>;
+		<span class="hljs-keyword">try</span> {
+		<span class="hljs-keyword">const</span> productList = <span class="hljs-keyword">await</span> productApi.fetchProductList();
+		<span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.isComponentMounted) {
+		<span class="hljs-built_in">this</span>.setState({ productList });
+	}
+	} <span class="hljs-keyword">catch</span> (error) {
+		<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;Failed to fetch data:&#x27;</span>, error);
+	}
+	}
+	<span class="hljs-function"><span class="hljs-title">componentWillUnmount</span>(<span class="hljs-params"></span>)</span> {
+		<span class="hljs-built_in">this</span>.isComponentMounted = <span class="hljs-literal">false</span>;
+	}
+	<span class="hljs-function"><span class="hljs-title">render</span>(<span class="hljs-params"></span>)</span> {
+	<span class="hljs-comment">// Render something here ...</span>
+	}
+}
+</code></pre>
+<blockquote>
+<p>bạn  <strong>không nên gọi <code>setState()</code></strong>  trong <code>componentWillUnmount()</code> vì thành phần sẽ không bao giờ được hiển thị lại. Sau khi một cá thể thành phần được ngắt kết nối, nó sẽ không bao giờ được gắn kết lại.</p>
+</blockquote>
