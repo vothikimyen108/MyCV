@@ -65,4 +65,14 @@
         "subcontent": "React.PureComponent và React.memo là gì",
         "content": "<div w3-include-html='./blog/Reactmemo.html'></div>"
     }
+    ,
+    {
+        "id": "7",
+        "title": "Redux là gì?",
+        "img": "../img/redux.png",
+        "author": "Kim Yến",
+        "createddate": "15-7-2021",
+        "subcontent": "Trong bài này mình tổng hợp tài liệu về Redux",
+        "content": "<div w3-include-html='./blog/Redux.html'></div>"
+    }
 ]

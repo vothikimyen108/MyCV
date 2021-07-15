@@ -1,0 +1,92 @@
+<h3>Tìm hiểu về Redux?</h3>
+<h4>Redux là gì?</h4>
+<p>Redux là một thư viện để quản lý và cập nhật state, state có thể dự đoán được.
+A state management system for cross-component or app-wide state</p>
+<h4>What Is Cross-Component / App-Wide State?</h4>
+<table class="table">
+<thead>
+<tr>
+<th>Local State</th>
+<th>Cross-Component State</th>
+<th>App-Wide State</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cho một components duy nhất</td>
+<td>Cho nhiều components</td>
+<td>Hầu hết tất cả component</td>
+</tr>
+<tr>
+<td>Ex: userinput</td>
+<td>Ex. giỏ hàng</td>
+<td>Ex. Info user…</td>
+</tr>
+<tr>
+<td>useState(), useReducer()</td>
+<td>React Context or Redux</td>
+<td>React Context or Redux</td>
+</tr>
+</tbody>
+</table>
+<h4>Cơ chế hoạt động redux?</h4>
+<p><img src="https://images.viblo.asia/3ba0e90f-1834-45b1-a5ab-a6f58abf21a0.gif" alt="enter image description here"></p>
+<p>Hoạt theo một chiều :</p>
+<p>Ban đầu co 1 state khởi tạo cho store này được đẩy lên trên UI(View), ví dụ có một hành động bấm deposit nó chạy lên actions -&gt; dispatcher vào store trong store có Reducer nó nhận vào 2 thứ, state hiện tại và thông tin actions được gửi lên đây tạo và biến đổi từ state cũ ra state mới.</p>
+<h4>React context và redux?</h4>
+<p>Như chúng ta đã biết React context cũng quản lý các state áp dụng cho nhiều coponents toàn app được như redux<br> Vậy tại sao cần redux ?
+<br>Bởi vì redux có vài nhược điểm tìm ẩn đối với các app nhỏ và vừa thì nó không có vấn đề, còn đối với các app lớn, sử dụng nhiều context để quản lý mang lại hiệu suất không tốt.</p>
+<ul>
+<li>Khi nào cần dùng Redux.</li>
+<li>Dữ liệu ở nhiều nơi</li>
+<li>Có hổ trợ undo/ Redo</li>
+<li>Cần cache dữ liệu tái sử dụng cho lần sau.</li>
+</ul>
+<blockquote>
+<p>Không nhất thiết dùng Redux, nếu app bạn chạy ổn, Redux không chỉ dược dùng với React js mà dùng với nhiều thư viện js khác nữa</p>
+</blockquote>
+<h4>Redux cơ bản</h4>
+<p>Cài đặt Redux</p>
+<blockquote>
+<p>npm install --save redux</p>
+</blockquote>
+<p>Bắt đầu làm quen redux</p>
+<pre class="hljs language-js"><code><span class="hljs-comment">//khai báo redux</span>
+<span class="hljs-keyword">const</span> redux = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;redux&quot;</span>);
+
+<span class="hljs-comment">//tạo một hàm xử lý reducer/ nhận vào 2 tham số old state , và action</span>
+<span class="hljs-keyword">const</span> countReducer = <span class="hljs-function">(<span class="hljs-params">state = { counter: <span class="hljs-number">0</span> }, action</span>) =&gt;</span> {
+  <span class="hljs-comment">//xử lý các action</span>
+
+  <span class="hljs-keyword">if</span> (action.type === <span class="hljs-string">&quot;increment&quot;</span>) {
+    <span class="hljs-keyword">return</span> {
+      <span class="hljs-attr">counter</span>: state.counter + <span class="hljs-number">1</span>,
+    };
+  }
+  <span class="hljs-keyword">if</span> (action.type === <span class="hljs-string">&quot;decrement&quot;</span>) {
+    <span class="hljs-keyword">return</span> {
+      <span class="hljs-attr">counter</span>: state.counter - <span class="hljs-number">1</span>,
+    };
+  }
+  <span class="hljs-keyword">return</span> state;
+};
+
+<span class="hljs-comment">//tạo ra một store nơi chưa các state hiện hành</span>
+<span class="hljs-keyword">const</span> store = redux.createStore(countReducer); <span class="hljs-comment">//tạo store nhận vào hàm xử lý state</span>
+
+<span class="hljs-comment">//hàm gọi state hiện có</span>
+<span class="hljs-keyword">const</span> countSubscribe = <span class="hljs-function">() =&gt;</span> {
+  <span class="hljs-keyword">const</span> lastetate = store.getState(); <span class="hljs-comment">// Phương thức getState() trả state hiện tại</span>
+  <span class="hljs-built_in">console</span>.log(lastetate);
+};
+
+<span class="hljs-comment">//dùng Phương thức subscribe() đăng ký hàm callback sẽ được gọi mỗi khi store được cập nhật</span>
+
+store.subscribe(countSubscribe); <span class="hljs-comment">//khi gọi phương thức này sẽ gọi hàm countSubscribe</span>
+
+<span class="hljs-comment">//Phương thức dispatch() được gọi, store chạy reducer nhận state được</span>
+<span class="hljs-comment">//cập nhật và chạy các hàm callback được subscribe để cập nhật UI.</span>
+
+store.dispatch({ <span class="hljs-attr">type</span>: <span class="hljs-string">&quot;increment&quot;</span> }); <span class="hljs-comment">//hành động tăng</span>
+store.dispatch({ <span class="hljs-attr">type</span>: <span class="hljs-string">&quot;decrement&quot;</span> }); <span class="hljs-comment">// thực hiện hành động giảm</span>
+</code></pre>
