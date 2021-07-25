@@ -75,4 +75,14 @@
         "subcontent": "Trong bài này mình tổng hợp tài liệu về Redux",
         "content": "<div w3-include-html='./blog/Redux.html'></div>"
     }
+    ,
+    {
+        "id": "8",
+        "title": "ReduxToolKit là gì?",
+        "img": "../img/reduxtoolkit.jpg",
+        "author": "Kim Yến",
+        "createddate": "15-7-2021",
+        "subcontent": "Trong bài này mình tổng hợp tài liệu về ReduxToolKit",
+        "content": "<div w3-include-html='./blog/Reduxtoolkit.html'></div>"
+    }
 ]

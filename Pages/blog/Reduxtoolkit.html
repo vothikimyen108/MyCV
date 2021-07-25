@@ -1,0 +1,56 @@
+<h3>ReduxToolKit là gì?</h3>
+<p>Gói Redux Toolkit là cách chuẩn để viết logic Redux. Ban đầu nó được tạo ra để giúp giải quyết ba mối quan tâm phổ biến về Redux.</p>
+<ul>
+<li>“Configuring a Redux store is too complicated”</li>
+<li>“I have to add a lot of packages to get Redux to do anything useful”</li>
+<li>“Redux requires too much boilerplate code”</li>
+</ul>
+<h3>Tìm hiểu các hàm?</h3>
+<p><strong>createSlice</strong> thật sự đã tạo ra một cú pháp hoàn chỉnh, nhất quán và ngắn gọn cho việc quản lý <strong>state</strong> của ứng dụng với <strong>redux</strong></p>
+<pre class="hljs language-js"><code><span class="hljs-keyword">import</span> { createSlice } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@reduxjs/toolkit&#x27;</span>
+
+<span class="hljs-keyword">const</span> initialState = { <span class="hljs-attr">value</span>: <span class="hljs-number">0</span> }
+
+<span class="hljs-keyword">const</span> counterSlice = createSlice({
+  <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;counter&#x27;</span>,
+  initialState,
+  <span class="hljs-attr">reducers</span>: {
+    <span class="hljs-function"><span class="hljs-title">increment</span>(<span class="hljs-params">state</span>)</span> {
+      state.value++
+    },
+    <span class="hljs-function"><span class="hljs-title">decrement</span>(<span class="hljs-params">state</span>)</span> {
+      state.value--
+    },
+    <span class="hljs-function"><span class="hljs-title">incrementByAmount</span>(<span class="hljs-params">state, action</span>)</span> {
+      state.value += action.payload
+    },
+  },
+})
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> { increment, decrement, incrementByAmount } = counterSlice.actions
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> counterSlice.reducer
+</code></pre>
+<p>Giải thích các thông số</p>
+<pre class="hljs language-js"><code><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createSlice</span>(<span class="hljs-params">{
+    <span class="hljs-regexp">//</span> tên của trạng thái
+    name: string,
+    <span class="hljs-regexp">//</span> giá trị trạng thái ban đầu
+    initialState: any,
+    <span class="hljs-regexp">//</span> là mộ obj thực hiện các hành động
+    reducers: <span class="hljs-built_in">Object</span>&lt;string, ReducerFunction | ReducerAndPrepareObject&gt;
+    <span class="hljs-regexp">//</span> A <span class="hljs-string">&quot;builder callback&quot;</span> <span class="hljs-keyword">function</span> used to add more reducers, or
+    <span class="hljs-regexp">//</span> an additional object <span class="hljs-keyword">of</span> <span class="hljs-string">&quot;case reducers&quot;</span>, where the keys should be other
+    <span class="hljs-regexp">//</span> action types
+    extraReducers?:
+    | <span class="hljs-built_in">Object</span>&lt;string, ReducerFunction&gt;
+    | ((builder: ActionReducerMapBuilder&lt;State&gt;) =&gt; <span class="hljs-keyword">void</span>)
+}</span>)
+</span></code></pre>
+<h3>configureStore()</h3>
+<p>Khai báo tạo store</p>
+<pre class="hljs language-js"><code><span class="hljs-keyword">import</span>  {  configureStore  }  <span class="hljs-keyword">from</span>  <span class="hljs-string">&#x27;@reduxjs/toolkit&#x27;</span>
+
+<span class="hljs-keyword">import</span> rootReducer <span class="hljs-keyword">from</span>  <span class="hljs-string">&#x27;./reducers&#x27;</span>
+
+<span class="hljs-keyword">const</span>  store  =  configureStore({  <span class="hljs-attr">reducer</span>:  rootReducer  })
+</code></pre>
