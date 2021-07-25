@@ -1,0 +1,99 @@
+<h3>Development React JS</h3>
+<p>Triển khai ứng dụng reactjs lên một server thực thông qua các bước. Thông qua các bước sau.</p>
+<h3>1. Test code</h3>
+<h3>2. Optimize Code</h3>
+<p>Lazy Loading là một kỹ thuật cũ để tối ưu hoá ứng dụng web cũng như ứng dụng di động. Cách hoạt động của nó khá đơn giản - Không hiển thị đối tượng nếu chúng không được xem hoặc không được yêu cầu tại thời điểm đó.</p>
+<pre class="hljs language-js"><code><span class="hljs-keyword">import</span> React, { Suspense } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react&quot;</span>;
+
+<span class="hljs-keyword">import</span> { Route, Switch, Redirect } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react-router-dom&quot;</span>;
+
+<span class="hljs-keyword">import</span> Layout <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./components/layout/Layout&quot;</span>;
+
+<span class="hljs-keyword">import</span> LoadingSpinner <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./components/UI/LoadingSpinner&quot;</span>;
+
+<span class="hljs-comment">//để nó Loanding hết mấy cái file</span>
+
+<span class="hljs-keyword">const</span> NewQuote = React.lazy(<span class="hljs-function">() =&gt;</span> <span class="hljs-keyword">import</span>(<span class="hljs-string">&quot;./Pages/NewQuote&quot;</span>));
+
+<span class="hljs-keyword">const</span> QuoteDetail = React.lazy(<span class="hljs-function">() =&gt;</span> <span class="hljs-keyword">import</span>(<span class="hljs-string">&quot;./Pages/QuoteDetail&quot;</span>));
+
+<span class="hljs-keyword">const</span> NotFound = React.lazy(<span class="hljs-function">() =&gt;</span> <span class="hljs-keyword">import</span>(<span class="hljs-string">&quot;./Pages/NotFound&quot;</span>));
+
+<span class="hljs-keyword">const</span> AllQuotes = React.lazy(<span class="hljs-function">() =&gt;</span> <span class="hljs-keyword">import</span>(<span class="hljs-string">&quot;./Pages/AllQuote&quot;</span>));
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">App</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">//lúc load nó hiện lên ui loanding</span>
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Layout</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Suspense</span>
+        <span class="hljs-attr">fallback</span>=<span class="hljs-string">{</span>
+          &lt;<span class="hljs-attr">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;centered&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">LoadingSpinner</span> /&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        }
+      &gt;
+        <span class="hljs-tag">&lt;<span class="hljs-name">Switch</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;/&quot;</span> <span class="hljs-attr">exact</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">Redirect</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;/quotes&quot;</span> /&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">Route</span>&gt;</span>
+
+          <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;/quotes&quot;</span> <span class="hljs-attr">exact</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">AllQuotes</span> /&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">Route</span>&gt;</span>
+
+          <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;/quotes/:quoteId&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">QuoteDetail</span> /&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">Route</span>&gt;</span>
+
+          <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;/new-quote&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">NewQuote</span> /&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">Route</span>&gt;</span>
+
+          <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;*&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">NotFound</span> /&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">Route</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">Switch</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">Suspense</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Layout</span>&gt;</span></span>
+  );
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> App;
+</code></pre>
+<h3>3. Build App for Production</h3>
+<p>Trong terminal chạy lệnh để buidl project</p>
+<blockquote>
+<p>npm run build</p>
+</blockquote>
+<p>sau khi build thành công trong project nó tạo một thư mục mới build chứa những gì mình build trong project, ảnh minh họa ở dưới.</p>
+<p><img src="https://i.ibb.co/z2p6vvD/anh1.png" alt="enter image description here"></p>
+<h3>4. Upload Production Code to Server</h3>
+<p>Một ứng dụng trang đơn React, là một trang web tĩnh, điều đó có nghĩa là nó chỉ được tạo thành từ HTML, CSS.</p>
+<p>Bạn có thể dùng nhiều server miễn phí khác, web này mình gọi api từ firebase và dùng firebase làm host, các bước thực hiện như sau vào firebase chọn project chọn tiếp Hosting và đến Set up Firebase Hosting.</p>
+<p>Trở lại terminal chạy lệnh sau:</p>
+<blockquote>
+<p>npm install -g firebase-tools</p>
+</blockquote>
+<p>Sau khi chạy xong đến bước tiếp theo đăng nhập vào firebase bằng lệnh.</p>
+<blockquote>
+<p>firebase login</p>
+</blockquote>
+<p>Hình ảnh minh họa đăng nhập thành công.</p>
+<p><img src="https://i.ibb.co/fdw9vHT/login.png" alt="enter image description here"></p>
+<p>Tạo thư mục firebase</p>
+<blockquote>
+<p>firebase init</p>
+</blockquote>
+<p>sau đó thiếp lập tính năng hosting</p>
+<p><img src="https://i.ibb.co/Bzcmcmf/init.png" alt="enter image description here"></p>
+<p>Cấu hình trang web</p>
+<p><img src="https://i.ibb.co/4gTx3jS/anh2.png" alt="enter image description here"></p>
+<h3>5. Configure Server</h3>
+<p>Cuối cùng là deloy firebase</p>
+<blockquote>
+<p>firebase deploy</p>
+</blockquote>
+<p>Link sau khi mình build thành công</p>
+<p>[React App (quotes-1de4b.web.app)]
+(<a href="https://quotes-1de4b.web.app/">https://quotes-1de4b.web.app/</a>)</p>

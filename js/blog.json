@@ -94,4 +94,15 @@
         "subcontent": "Trong bài này mình tổng hợp tài liệu về React Router",
         "content": "<div w3-include-html='./blog/reactrouter.html'></div>"
     }
+    ,
+    {
+        "id": "9",
+        "title": "Làm cách nào DeployReactJS",
+        "img": "../img/DeployReactJS.jpg",
+        "author": "Kim Yến",
+        "createddate": "15-7-2021",
+        "subcontent": "Trong bài này mình nói về cách deloy project",
+        "content": "<div w3-include-html='./blog/deloyreact.html'></div>"
+    }
+    
 ]
