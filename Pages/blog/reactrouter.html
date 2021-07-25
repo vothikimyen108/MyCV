@@ -1,0 +1,109 @@
+<h3>ReactRouter là gì?</h3>
+<h3><strong>React-Router là gì?</strong></h3>
+<p><code>React-Router</code> là một thư viện định tuyến (routing) tiêu chuẩn trong React, Router dùng chủ yếu phát triển các ứng dụng Web dạng Single Page. Nó cho phép chuyển qua lại giữa các component mà không cần nạp lại trang. React có 3 gói cho routing</p>
+<p>– react-router: cung cấp các thành phần routing chính cho ứng dụng.</p>
+<p>– react-router-native: dùng cho các ứng dụng di động.</p>
+<p>– react-router-dom: dùng cho các ứng dụng Web.</p>
+<p>Cài đặt:</p>
+<blockquote>
+<p>npm install react-router-dom --save</p>
+</blockquote>
+<h3><strong>Các thành phần trong React-Router</strong></h3>
+<p><strong>BrowserRouter</strong>: xử lý các URL động. Được sử dụng phổ biến hơn, nó sử dụng <code>History API</code> có trong <code>HTML5</code> để theo dõi lịch sử bộ định tuyến của bạn.</p>
+<p><strong>HashRouter</strong>: xử lý các request tĩnh. Sử dụng <code>hash</code> của <code>URL</code> (window.location.hash) để ghi nhớ mọi thứ.</p>
+<p><strong>Route</strong>: một ánh xạ (mapping) giữa một URL và một <code>Component</code>, khi người dùng truy cập URl thit component nó đc hiển thị.</p>
+<p><strong>Switch</strong>: chứa các Route để render các component kho path khớp.</p>
+<p>Các tham số:</p>
+<ul>
+<li>
+<p><strong>path:</strong> Là đường dẫn trên URL.</p>
+</li>
+<li>
+<p><strong>exact:</strong> Liúp cho route này này chỉ hoạt động nếu URL trên trình duyệt phù hợp tuyệt đối với giá trị của thuộc tính path của nó.</p>
+</li>
+<li>
+<p><strong>component:</strong> Là component sẽ đươc load ra tương ứng với Route đó.</p>
+</li>
+</ul>
+<pre class="hljs language-js"><code>
+&lt;Route  path=<span class="hljs-string">&quot;/&quot;</span>  exact  component={Home}  /&gt;
+
+</code></pre>
+<p><strong>Link</strong>: HTML thì cặp thẻ để chuyển hướng đó là thẻ <code>&lt;a&gt;&lt;/a&gt;</code> thì trong react chúng ta sẽ dử dụng cặp thẻ <code>&lt;Link&gt;&lt;/Link&gt;</code> được <code>import</code> từ <code>React-Router</code>.</p>
+<ul>
+<li><strong>to</strong>: Giống như thuộc tính <code>href</code> trong thẻ <code>a</code>.</li>
+</ul>
+<p><strong>NavLink</strong>: tương tự Link nhưng cho phép thêm style cho active link</p>
+<p><strong>Redirect</strong>: dùng chuyển hướng đến route khác trong ứng dụng, nhưng vẫn duy trì URL cũ.</p>
+<p><strong>Prompt</strong></p>
+<p>Sử dụng <strong>API Prompt</strong> giúp chúng ta ngăn chặn việc điều hướng trực tiếp, giả sử một tác vụ đang được thực hiện, <strong>user</strong> muốn điều hướng sang màn hình khác hay thoát khỏi ứng dụng sẽ cần thông qua thêm một bước xác nhận, <strong>Promp</strong> được <strong>render</strong> như một element bên trong <strong>React Component</strong>.### ReactRouter là gì?</p>
+<p><strong>React-Router là gì?</strong></p>
+<p><code>React-Router</code> là một thư viện định tuyến (routing) tiêu chuẩn trong React, Router dùng chủ yếu phát triển các ứng dụng Web dạng Single Page. Nó cho phép chuyển qua lại giữa các component mà không cần nạp lại trang. React có 3 gói cho routing</p>
+<p>– react-router: cung cấp các thành phần routing chính cho ứng dụng.</p>
+<p>– react-router-native: dùng cho các ứng dụng di động.</p>
+<p>– react-router-dom: dùng cho các ứng dụng Web.</p>
+<p>Cài đặt:</p>
+<blockquote>
+<p>npm install react-router-dom --save</p>
+</blockquote>
+<p><strong>Các thành phần trong React-Router</strong></p>
+<p><strong>BrowserRouter</strong>: xử lý các URL động. Được sử dụng phổ biến hơn, nó sử dụng <code>History API</code> có trong <code>HTML5</code> để theo dõi lịch sử bộ định tuyến của bạn.</p>
+<p><strong>HashRouter</strong>: xử lý các request tĩnh. Sử dụng <code>hash</code> của <code>URL</code> (window.location.hash) để ghi nhớ mọi thứ.</p>
+<p><strong>Route</strong>: một ánh xạ (mapping) giữa một URL và một <code>Component</code>, khi người dùng truy cập URl thit component nó đc hiển thị.</p>
+<p><strong>Switch</strong>: chứa các Route để render các component kho path khớp.</p>
+<p>Các tham số:</p>
+<ul>
+<li>
+<p><strong>path:</strong> Là đường dẫn trên URL.</p>
+</li>
+<li>
+<p><strong>exact:</strong> Liúp cho route này này chỉ hoạt động nếu URL trên trình duyệt phù hợp tuyệt đối với giá trị của thuộc tính path của nó.</p>
+</li>
+<li>
+<p><strong>component:</strong> Là component sẽ đươc load ra tương ứng với Route đó.</p>
+</li>
+</ul>
+<pre class="hljs language-js"><code>
+&lt;Route  path=<span class="hljs-string">&quot;/&quot;</span>  exact  component={Home}  /&gt;
+
+</code></pre>
+<p><strong>Link</strong>: HTML thì cặp thẻ để chuyển hướng đó là thẻ <code>&lt;a&gt;&lt;/a&gt;</code> thì trong react chúng ta sẽ dử dụng cặp thẻ <code>&lt;Link&gt;&lt;/Link&gt;</code> được <code>import</code> từ <code>React-Router</code>.</p>
+<ul>
+<li><strong>to</strong>: Giống như thuộc tính <code>href</code> trong thẻ <code>a</code>.</li>
+</ul>
+<p><strong>NavLink</strong>: tương tự Link nhưng cho phép thêm style cho active link</p>
+<p><strong>Redirect</strong>: dùng chuyển hướng đến route khác trong ứng dụng, nhưng vẫn duy trì URL cũ.</p>
+<p><strong>Prompt</strong></p>
+<p>Sử dụng <strong>API Prompt</strong> giúp chúng ta ngăn chặn việc điều hướng trực tiếp, giả sử một tác vụ đang được thực hiện, <strong>user</strong> muốn điều hướng sang màn hình khác hay thoát khỏi ứng dụng sẽ cần thông qua thêm một bước xác nhận, <strong>Promp</strong> được <strong>render</strong> như một element bên trong <strong>React Component</strong>.</p>
+<h3><strong>## Hook APIs</strong></h3>
+<p><strong>useHisrtory</strong> được sử dụng để thay đổi url, ví dụ như khi bạn đang ở mà hình login chẳng hạn, <code>\users\login</code>, sau khi đã authen xong thì cần redirect tới màn dashboard,
+ví dụ</p>
+<pre class="hljs language-js"><code>
+<span class="hljs-keyword">const</span>  history = useHistory();
+
+history.push(<span class="hljs-string">&#x27;\dashboard`);
+
+</span></code></pre>
+<p><strong>useParams</strong>  lấy thông tin từ các <code>params</code></p>
+<pre class="hljs language-js"><code><span class="hljs-keyword">import</span>  { useParams }  <span class="hljs-keyword">from</span>  <span class="hljs-string">&quot;react-router-dom&quot;</span> 
+<span class="hljs-comment">// route: /user/:userName  </span>
+<span class="hljs-keyword">const</span>  User  =  <span class="hljs-function">()  =&gt;</span>  {  
+    <span class="hljs-keyword">const</span> params =  useParams();  
+    <span class="hljs-keyword">return</span>  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>{params.userName}<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span> 
+)
+</code></pre>
+<p><strong>useLocation</strong>  sẽ trả về <code>location</code> object hiện tại. Nó sẽ giúp ích trong trường hợp chúng ta muốn lấy thông tin từ URL hiện tại.</p>
+<pre class="hljs language-js"><code><span class="hljs-keyword">import</span>  { useParams }  <span class="hljs-keyword">from</span>  <span class="hljs-string">&quot;react-router-dom&quot;</span> 
+   <span class="hljs-keyword">const</span>  useAnalytics  =  <span class="hljs-function">(<span class="hljs-params">props</span>)  =&gt;</span>  {  
+   <span class="hljs-keyword">const</span> location =  useLocation();  
+   useEffect(<span class="hljs-function">()  =&gt;</span>  { ga.send([<span class="hljs-string">&#x27;pageview&#x27;</span>, location.pathname]);  },  []) 
+)
+</code></pre>
+<p><strong>useRouteMatch</strong> giúp ích khi chúng ta muốn sử dụng <code>Route</code> chỉ để get <code>match</code> param. Thay vì sử dụng <code>Route</code>, chúng ta có thể sử dụng</p>
+<pre class="hljs language-js"><code><span class="hljs-keyword">import</span> {  useRouteMatch } <span class="hljs-keyword">from</span>  <span class="hljs-string">&quot;react-router-dom&quot;</span>;
+<span class="hljs-keyword">const</span>  App  =  <span class="hljs-function">()  =&gt;</span>  { 
+   <span class="hljs-keyword">const</span>  match = useRouteMatch(); 
+   <span class="hljs-keyword">return</span> match ?  ( 
+  	  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Hot {match.path}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>  )  :  (  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Uncool<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>  ) )
+}
+</code></pre>

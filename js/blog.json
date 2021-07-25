@@ -79,10 +79,19 @@
     {
         "id": "8",
         "title": "ReduxToolKit là gì?",
-        "img": "../img/reduxtoolkit.jpg",
+        "img": "../img/reduxtoolkit.png",
         "author": "Kim Yến",
         "createddate": "15-7-2021",
         "subcontent": "Trong bài này mình tổng hợp tài liệu về ReduxToolKit",
         "content": "<div w3-include-html='./blog/Reduxtoolkit.html'></div>"
+    },
+    {
+        "id": "9",
+        "title": "React Router là gì",
+        "img": "../img/reactrouter.jpg",
+        "author": "Kim Yến",
+        "createddate": "15-7-2021",
+        "subcontent": "Trong bài này mình tổng hợp tài liệu về React Router",
+        "content": "<div w3-include-html='./blog/reactrouter.html'></div>"
     }
 ]
