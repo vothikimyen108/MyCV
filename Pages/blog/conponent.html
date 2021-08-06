@@ -35,7 +35,8 @@ Có hai loại là Funtional và Class Components.</p>
 <p><img src="https://i.ibb.co/2hJ882f/vongdoi.png" alt="Minion"></p>
 <p>Vòng đời của componen gồm 3 giai đoạn:
 <strong>componentDidMount()</strong> : lúc mới tạo ra, add và trong Dom
-<strong>componentDidUpdate()</strong>: Có thay đổi <strong>componentWillUnmount()</strong>: Bị hủy nkhỏi khỏi Dom.</p>
+<strong>componentDidUpdate()</strong>: Có thay đổi
+<strong>componentWillUnmount()</strong>: Bị hủy khỏi khỏi Dom</p>
 <p>Mỗi giai đoạn có các event cần thực hiện</p>
 <p><img src="https://i1.wp.com/programmingwithmosh.com/wp-content/uploads/2018/10/Screen-Shot-2018-10-31-at-1.44.28-PM.png?resize=1024%2C567&amp;ssl=1" alt="Minion"></p>
 <h3>Mounting (Diễn ra đúng 1 lần)</h3>
@@ -146,6 +147,5 @@ Reset dữ liệu trên redux nếu cần thiết.</p>
 }
 </code></pre>
 <blockquote>
-<p>bạn  <strong>không nên gọi <code>setState()</code></strong>  trong <code>componentWillUnmount()</code> vì thành phần sẽ không bao giờ được hiển thị lại. Sau khi một cá thể thành phần được ngắt kết nối, nó sẽ không bao giờ được gắn kết lại.</p>
+<p><strong>không nên gọi <code>setState()</code></strong>  trong <code>componentWillUnmount()</code> vì thành phần sẽ không bao giờ được hiển thị lại. Sau khi một cá thể thành phần được ngắt kết nối, nó sẽ không bao giờ được gắn kết lại.</p>
 </blockquote>
-<p>Tham khảo từ nhiều nguồn trên internet</p>
